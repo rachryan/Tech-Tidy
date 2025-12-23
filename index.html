@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Replace YOUR_CALENDLY_PATH and YOUR_FORMSPREE_ID below -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechTidy — Practical Tech, Everyday AI, Automation</title>
+  <meta name="description" content="TechTidy helps solo professionals and small teams clean up Microsoft 365 & Google Workspace, use AI confidently, and automate repetitive work — evenings/weekends, limited monthly slots." />
+  <meta property="og:title" content="TechTidy — Side-Hustle Consulting" />
+  <meta property="og:description" content="Retainers, rapid fixes, and lightweight projects that fit busy schedules. Evenings/weekends. Limited slots." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#141410" />
+
+  <!-- Tailwind (optional, kept for your existing layout conveniences) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your Anthropic-style theme + components -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="tt-body antialiased">
+  <!-- Skip link (accessibility) -->
+  <a class="tt-skip" href="#main">Skip to content</a>
+
+  <!-- Capacity banner -->
+  <div class="tt-topbar">
+    <div class="tt-container tt-topbar-inner">
+      <span>Availability: <strong>Evenings/Weekends</strong> • <strong>Limited monthly slots</strong></span>
+      <a class="tt-link" href="#book">Book a session</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="tt-header" role="banner">
+    <div class="tt-container tt-header-inner">
+      <a href="#home" class="tt-brand" aria-label="TechTidy home">TechTidy</a>
+
+      <nav class="tt-nav" aria-label="Primary">
+        <a href="#offers" class="tt-navlink">Offers</a>
+        <a href="#retainers" class="tt-navlink">Retainers</a>
+        <a href="#results" class="tt-navlink">Results</a>
+        <a href="#about" class="tt-navlink">About</a>
+        <a href="#faq" class="tt-navlink">FAQ</a>
+        <a href="#contact" class="tt-navlink">Contact</a>
+      </nav>
+
+      <div class="tt-header-actions">
+        <a class="tt-btn tt-btn-primary" href="#book">Book</a>
+        <button class="tt-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="tt-mobile" hidden>
+      <div class="tt-container tt-mobile-inner">
+        <a href="#offers" class="tt-mobilelink">Offers</a>
+        <a href="#retainers" class="tt-mobilelink">Retainers</a>
+        <a href="#results" class="tt-mobilelink">Results</a>
+        <a href="#about" class="tt-mobilelink">About</a>
+        <a href="#book" class="tt-mobilelink">Book</a>
+        <a href="#faq" class="tt-mobilelink">FAQ</a>
+        <a href="#contact" class="tt-mobilelink">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero (Anthropic-style: headline left, copy right) -->
+    <section id="home" class="tt-hero">
+      <div class="tt-container">
+        <div class="tt-hero-grid">
+          <div class="tt-hero-left">
+            <h1 class="tt-h1">
+              Practical tech and automation
+              <span class="tt-h1-accent">for real people.</span>
+            </h1>
+          </div>
+
+          <div class="tt-hero-right">
+            <p class="tt-lead">
+              I’m <strong>Rachel</strong>. I help solo professionals and small teams clean up Microsoft 365 & Google Workspace,
+              use AI the practical way, and build lightweight automations that save hours—without adding chaos.
+            </p>
+            <p class="tt-lead">
+              The goal: fewer tabs, fewer “where is that file,” fewer repeated admin tasks—and a system you can actually maintain.
+            </p>
+
+            <div class="tt-hero-cta">
+              <a href="#book" class="tt-btn tt-btn-primary">Book a session</a>
+              <a href="#offers" class="tt-btn tt-btn-secondary">See offers</a>
+            </div>
+
+            <dl class="tt-meta">
+              <div>
+                <dt>Platforms</dt>
+                <dd>Microsoft 365 • Google Workspace</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd>Remote • Evenings/Weekends</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- 3 feature cards (Anthropic-style pastel panels) -->
+        <div class="tt-feature-grid" aria-label="Featured links">
+          <a class="tt-feature tt-sand" href="#offers">
+            <div class="tt-icon" aria-hidden="true">
+              <!-- simple line icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10M7 12h10M7 17h6" />
+                <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              </svg>
+            </div>
+            <h3>Offers that fit a busy life</h3>
+            <p>Rapid fixes, declutters, AI kickstarts, and mini-pilots—scoped cleanly.</p>
+          </a>
+
+          <a class="tt-feature tt-sage" href="#retainers">
+            <div class="tt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 7l-8 10L4 7" />
+                <path d="M4 7h16" />
+              </svg>
+            </div>
+            <h3>Retainers: predictable help</h3>
+            <p>Monthly support for fixes, coaching, and small builds—without re-explaining everything.</p>
+          </a>
+
+          <a class="tt-feature tt-lav" href="#book">
+            <div class="tt-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 3h10v18H7z" />
+                <path d="M9 7h6M9 11h6M9 15h6" />
+              </svg>
+            </div>
+            <h3>Book a working session</h3>
+            <p>Screen-share, solve the thing, document it, and leave you with next steps.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section id="offers" class="tt-section">
+      <div class="tt-container">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Offers</h2>
+          <p class="tt-sub">High-leverage, short, outcome-first. Start small, see results, scale if needed.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <article class="tt-card">
+            <h3 class="tt-h3">Rapid Fix (30 min)</h3>
+            <p class="tt-p">One gnarly issue, solved fast. Screen-share, step-by-step.</p>
+            <div class="tt-price">$95</div>
+            <ul class="tt-list">
+              <li>Microsoft 365 or Google Workspace</li>
+              <li>Clear next steps + mini recap</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Book now</a>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">Digital Declutter</h3>
+            <p class="tt-p">Folder structure that sticks. Permission sanity. Backup basics.</p>
+            <div class="tt-price">$750</div>
+            <ul class="tt-list">
+              <li>90-min audit + tidy session</li>
+              <li>Before/After map + guide</li>
+              <li>Optional follow-up (bundle)</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Start</a>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">AI Kickstart</h3>
+            <p class="tt-p">Real-world prompts, data safety, and weekly use cases.</p>
+            <div class="tt-price">$1,150</div>
+            <ul class="tt-list">
+              <li>90-min session + prompt kit</li>
+              <li>Guardrails & workflows</li>
+              <li>30-min follow-up</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Book discovery</a>
+          </article>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <article class="tt-card">
+            <h3 class="tt-h3">Automation Mini-Pilot</h3>
+            <p class="tt-p">One workflow, end-to-end. Power Automate, Zapier, or Make.</p>
+            <div class="tt-price">$1,950</div>
+            <ul class="tt-list">
+              <li>Process map + build + test</li>
+              <li>Impact estimate + next steps</li>
+              <li>Optional “care plan” retainer</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Discuss scope</a>
+          </article>
+
+          <article class="tt-card tt-card-soft">
+            <h3 class="tt-h3">What I work in</h3>
+            <p class="tt-p">
+              OneDrive/SharePoint • Teams • Outlook • Power Automate • Drive • Docs/Sheets/Slides • Gmail • Admin Console
+            </p>
+            <p class="tt-note">Evening/weekend delivery. Clear scope. Documented outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retainers -->
+    <section id="retainers" class="tt-section tt-section-alt">
+      <div class="tt-container">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Retainers</h2>
+          <p class="tt-sub">Predictable help that keeps you moving between projects.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <article class="tt-card">
+            <h3 class="tt-h3">Essentials</h3>
+            <div class="tt-price">$300 <span class="tt-price-sub">/mo</span></div>
+            <ul class="tt-list">
+              <li>60 min support/month</li>
+              <li>Email/DM “quick questions”</li>
+              <li>Issue log + mini how-tos</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Get started</a>
+          </article>
+
+          <article class="tt-card tt-card-focus">
+            <h3 class="tt-h3">Standard</h3>
+            <div class="tt-price">$400 <span class="tt-price-sub">/mo</span></div>
+            <ul class="tt-list">
+              <li>90 min support/month</li>
+              <li>Priority booking</li>
+              <li>Quarterly tidy checklist</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Choose Standard</a>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">Pro</h3>
+            <div class="tt-price">$500 <span class="tt-price-sub">/mo</span></div>
+            <ul class="tt-list">
+              <li>120 min support/month</li>
+              <li>Monthly automation tune-ups</li>
+              <li>Mini training refresh</li>
+            </ul>
+            <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Choose Pro</a>
+          </article>
+        </div>
+
+        <p class="tt-footnote">Unused retainer time rolls 30 days. Upgrade/downgrade anytime.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="tt-section">
+      <div class="tt-container">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Results</h2>
+          <p class="tt-sub">Practical outcomes you can feel in your week.</p>
+        </div>
+
+        <ul class="grid sm:grid-cols-3 gap-6 mt-10">
+          <li class="tt-stat">
+            <div class="tt-stat-num">10–20 hrs/mo</div>
+            <p class="tt-stat-label">Typical time saved after one automation</p>
+          </li>
+          <li class="tt-stat">
+            <div class="tt-stat-num">↓ 70%</div>
+            <p class="tt-stat-label">Fewer file-sprawl issues post-cleanup</p>
+          </li>
+          <li class="tt-stat">
+            <div class="tt-stat-num">95%</div>
+            <p class="tt-stat-label">Clients use 3+ AI prompts weekly</p>
+          </li>
+        </ul>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <figure class="tt-quote">
+            <blockquote>“Our file chaos finally makes sense. We stopped emailing attachments and actually trust our folders.”</blockquote>
+            <figcaption>— Program Lead, education nonprofit</figcaption>
+          </figure>
+          <figure class="tt-quote">
+            <blockquote>“The automation paid for itself in a month. Admin time dropped to minutes.”</blockquote>
+            <figcaption>— Owner, small services business</figcaption>
+          </figure>
+          <figure class="tt-quote">
+            <blockquote>“Rachel teaches AI without hype. Clear, safe, immediately useful.”</blockquote>
+            <figcaption>— Department Head, public sector</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="tt-section tt-section-alt">
+      <div class="tt-container">
+        <div class="grid lg:grid-cols-3 gap-10 items-start">
+          <div class="lg:col-span-2">
+            <h2 class="tt-h2">About</h2>
+            <p class="tt-sub mt-4">
+              With 20+ years in technology, I’ve seen how easily systems get messy—especially when you’re busy doing the real work.
+              If your tools are fighting you, we fix the foundation and make it stick.
+            </p>
+            <ul class="tt-list mt-6">
+              <li>Clean folder structure (Microsoft 365 & Google Workspace)</li>
+              <li>Practical AI for writing, notes, and decisions (with guardrails)</li>
+              <li>Automation that saves hours without adding complexity</li>
+              <li>Security basics: passwords, sharing, sensible habits</li>
+              <li>Documentation so changes survive Monday</li>
+            </ul>
+          </div>
+
+          <aside class="tt-card tt-card-soft">
+            <h3 class="tt-h3">Focus areas</h3>
+            <div class="tt-pillgrid">
+              <span class="tt-pill">Microsoft 365</span>
+              <span class="tt-pill">Google Workspace</span>
+              <span class="tt-pill">AI Coaching</span>
+              <span class="tt-pill">Workflow Design</span>
+              <span class="tt-pill">Automation</span>
+              <span class="tt-pill">Digital Decluttering</span>
+              <span class="tt-pill">Security Basics</span>
+              <span class="tt-pill">Change Management</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="book" class="tt-section">
+      <div class="tt-container max-w-5xl">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Book a session</h2>
+          <p class="tt-sub">Pick a time that works. You’ll get a short intake so we can hit the ground running.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 mt-10">
+          <div class="tt-frame">
+            <iframe
+              src="https://calendly.com/YOUR_CALENDLY_PATH/60min?hide_landing_page_details=1&hide_gdpr_banner=1"
+              class="w-full h-[680px]" title="Book with TechTidy"></iframe>
+          </div>
+
+          <form id="waitlistForm" class="tt-card" aria-label="Waitlist form">
+            <h3 class="tt-h3">No slot that works?</h3>
+            <p class="tt-p">Join the waitlist and I’ll ping you when an evening/weekend spot opens.</p>
+
+            <label class="tt-field">
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+
+            <label class="tt-field">
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+
+            <label class="tt-field">
+              <span>What do you need help with?</span>
+              <textarea name="message" rows="4"></textarea>
+            </label>
+
+            <button class="tt-btn tt-btn-primary tt-btn-full" type="submit">Join waitlist</button>
+
+            <p id="waitlistSuccess" class="tt-success hidden">Thanks — you’re on the list. I’ll reach out when a slot opens.</p>
+            <p id="waitlistError" class="tt-error hidden">Something went wrong. Please try again.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="tt-section tt-section-alt">
+      <div class="tt-container max-w-5xl">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">FAQ</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <article class="tt-card">
+            <h3 class="tt-h3">Do you work remotely?</h3>
+            <p class="tt-p">Yes—most sessions are on Zoom with screen-share. On-site may be possible depending on location and scope.</p>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">Individuals or teams?</h3>
+            <p class="tt-p">Both. Many clients start solo, then bring the team once the foundation is tidy.</p>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">How do retainers work?</h3>
+            <p class="tt-p">Prepay monthly time at a discount. Use for fixes, coaching, or small builds. Unused time rolls 30 days.</p>
+          </article>
+
+          <article class="tt-card">
+            <h3 class="tt-h3">Urgent help?</h3>
+            <p class="tt-p">Book the fastest slot you see; add “urgent” to the notes. I’ll confirm if I can expedite.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tt-section">
+      <div class="tt-container max-w-3xl">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Contact</h2>
+          <p class="tt-sub">Tell me a little about your goals. I’ll reply within one business day (evenings/weekends).</p>
+        </div>
+
+        <form id="contactForm" class="tt-card mt-10" aria-label="Contact form">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="tt-field">
+              <span>Name</span>
+              <input id="name" type="text" name="name" required />
+            </label>
+
+            <label class="tt-field">
+              <span>Email</span>
+              <input id="email" type="email" name="email" required />
+            </label>
+          </div>
+
+          <label class="tt-field">
+            <span>Organization (optional)</span>
+            <input id="org" type="text" name="org" />
+          </label>
+
+          <label class="tt-field">
+            <span>What would you like to achieve?</span>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </label>
+
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <div class="tt-note">No spam. No sharing your details.</div>
+            <button id="submitBtn" type="submit" class="tt-btn tt-btn-primary">Send message</button>
+          </div>
+
+          <p id="formSuccess" class="tt-success hidden mt-3">Thanks — I’ve got your message and will reply within one business day.</p>
+          <p id="formError" class="tt-error hidden mt-3">Something went wrong. Please try again or email me directly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="tt-footer">
+    <div class="tt-container tt-footer-inner">
+      <p>© <span id="year"></span> TechTidy. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a class="tt-link" href="#offers">Offers</a>
+        <a class="tt-link" href="#retainers">Retainers</a>
+        <a class="tt-link" href="#results">Results</a>
+        <a class="tt-link" href="#book">Book</a>
+        <a class="tt-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.tt-menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        mobileMenu.hidden = isOpen;
+      });
+
+      // Close menu when a link is clicked
+      mobileMenu.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target && target.tagName === 'A') {
+          menuBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.hidden = true;
+        }
+      });
+    }
+
+    // Formspree endpoints (replace with your own)
+    const FORMSPREE_CONTACT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+    const FORMSPREE_WAITLIST = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+
+    async function submitForm(form, endpoint, successEl, errorEl, button, idleText) {
+      successEl.classList.add('hidden');
+      errorEl.classList.add('hidden');
+      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data });
+        if (res.ok) {
+          form.reset();
+          successEl.classList.remove('hidden');
+        } else {
+          errorEl.classList.remove('hidden');
+        }
+      } catch (e) {
+        errorEl.classList.remove('hidden');
+      } finally {
+        if (button) { button.disabled = false; button.textContent = idleText || 'Send message'; }
+      }
+    }
+
+    // Contact form
+    const contactForm = document.getElementById('contactForm');
+    const contactSuccess = document.getElementById('formSuccess');
+    const contactError = document.getElementById('formError');
+    const contactBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitForm(contactForm, FORMSPREE_CONTACT, contactSuccess, contactError, contactBtn, 'Send message');
+      });
+    }
+
+    // Waitlist form
+    const waitlistForm = document.getElementById('waitlistForm');
+    const waitlistSuccess = document.getElementById('waitlistSuccess');
+    const waitlistError = document.getElementById('waitlistError');
+
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = waitlistForm.querySelector('button[type="submit"]');
+        submitForm(waitlistForm, FORMSPREE_WAITLIST, waitlistSuccess, waitlistError, btn, 'Join waitlist');
+      });
+    }
+  </script>
+</body>
+</html>
