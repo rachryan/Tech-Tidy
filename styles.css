@@ -1,6 +1,6 @@
 /* styles.css */
 :root{
-  /* Less Anthropic: cleaner, cooler neutral */
+  /* Base */
   --bg: #F7F7F5;
   --text: #141410;
   --muted: #5F5F57;
@@ -10,6 +10,11 @@
 
   --panel: #ffffff;
   --panel-soft: rgba(255,255,255,0.65);
+
+  /* Palette accents (same family you liked) */
+  --sand: #EDE8DF;
+  --sage: #DCE8E3;
+  --lav:  #E2E3F0;
 
   --radius: 12px;
   --radius-lg: 14px;
@@ -225,9 +230,7 @@ html{ scroll-behavior: smooth; }
   letter-spacing: -0.03em;
   margin: 0;
 }
-.tt-h2-sm{
-  font-size: 20px;
-}
+.tt-h2-sm{ font-size: 20px; }
 
 .tt-sub{
   margin-top: 10px;
@@ -349,23 +352,28 @@ html{ scroll-behavior: smooth; }
   font-size: 13px;
 }
 
+/* Focus area pills */
 .tt-pillgrid{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 12px;
 }
+
 .tt-pill{
   display:inline-flex;
   justify-content:center;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
-  border: 1px solid var(--border-soft);
-  background: rgba(255,255,255,0.8);
   font-size: 13px;
-  color: var(--text);
   font-weight: 600;
+  color: var(--text);
+  border: 1px solid rgba(20,20,16,0.08);
 }
+
+.tt-pill-sand{ background: var(--sand); }
+.tt-pill-sage{ background: var(--sage); }
+.tt-pill-lav{  background: var(--lav); }
 
 .tt-frame{
   background: #fff;
