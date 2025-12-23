@@ -178,13 +178,7 @@
             <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Discuss scope</a>
           </article>
 
-          <div class="tt-plain">
-            <h3 class="tt-h3">What I work in</h3>
-            <p class="tt-p">
-              OneDrive/SharePoint • Teams • Outlook • Power Automate • Drive • Docs/Sheets/Slides • Gmail • Admin Console
-            </p>
-            <p class="tt-note">Evening/weekend delivery. Clear scope. Documented outcomes.</p>
-          </div>
+        
         </div>
       </div>
     </section>
@@ -304,34 +298,13 @@
         <div class="grid lg:grid-cols-2 gap-8 mt-10">
           <div class="tt-frame">
             <iframe
-              src="https://calendly.com/YOUR_CALENDLY_PATH/60min?hide_landing_page_details=1&hide_gdpr_banner=1"
+              src="https://calendly.com/tech_tidy/30min"
               class="w-full h-[680px]" title="Book with TechTidy"></iframe>
           </div>
 
-          <form id="waitlistForm" class="tt-card" aria-label="Waitlist form">
-            <h3 class="tt-h3">No slot that works?</h3>
-            <p class="tt-p">Join the waitlist and I’ll ping you when an evening/weekend spot opens.</p>
-
-            <label class="tt-field">
-              <span>Name</span>
-              <input type="text" name="name" required />
-            </label>
-
-            <label class="tt-field">
-              <span>Email</span>
-              <input type="email" name="email" required />
-            </label>
-
-            <label class="tt-field">
-              <span>What do you need help with?</span>
-              <textarea name="message" rows="4"></textarea>
-            </label>
-
-            <button class="tt-btn tt-btn-primary tt-btn-full" type="submit">Join waitlist</button>
-
-            <p id="waitlistSuccess" class="tt-success hidden">Thanks — you’re on the list. I’ll reach out when a slot opens.</p>
-            <p id="waitlistError" class="tt-error hidden">Something went wrong. Please try again.</p>
-          </form>
+       <p class="tt-note mt-4">
+  Prefer email first? Use the contact form below — I reply within one business day.
+</p>
         </div>
       </div>
     </section>
@@ -447,8 +420,8 @@
     }
 
     // Replace with your Formspree IDs
-    const FORMSPREE_CONTACT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
-    const FORMSPREE_WAITLIST = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+    const FORMSPREE_CONTACT = "https://formspree.io/f/movgnywr";
+    const FORMSPREE_WAITLIST = "https://formspree.io/f/movgnywr";
 
     async function submitForm(form, endpoint, successEl, errorEl, button, idleText) {
       successEl.classList.add('hidden');
@@ -481,18 +454,7 @@
         e.preventDefault();
         submitForm(contactForm, FORMSPREE_CONTACT, contactSuccess, contactError, contactBtn, 'Send message');
       });
-    }
-
-    const waitlistForm = document.getElementById('waitlistForm');
-    const waitlistSuccess = document.getElementById('waitlistSuccess');
-    const waitlistError = document.getElementById('waitlistError');
-
-    if (waitlistForm) {
-      waitlistForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = waitlistForm.querySelector('button[type="submit"]');
-        submitForm(waitlistForm, FORMSPREE_WAITLIST, waitlistSuccess, waitlistError, btn, 'Join waitlist');
-      });
+  
     }
   </script>
 </body>
