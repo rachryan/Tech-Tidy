@@ -8,10 +8,9 @@
   <meta name="description" content="TechTidy helps solo professionals and small teams clean up Microsoft 365 & Google Workspace, use AI confidently, and automate repetitive work." />
   <meta name="theme-color" content="#141410" />
 
-  <!-- Optional: Tailwind for layout utilities -->
+  <!-- Optional: Tailwind for grid utilities -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Site styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -65,10 +64,14 @@
       <div class="tt-container">
         <div class="tt-hero-grid">
           <div class="tt-hero-left">
-            <h1 class="tt-h1">Practical tech, AI, and automation <span class="tt-h1-accent">for busy people.</span></h1>
+            <h1 class="tt-h1">
+              Practical tech, AI, and automation
+              <span class="tt-h1-accent">for busy people.</span>
+            </h1>
+
             <p class="tt-lead">
-              TechTidy helps solo professionals and small teams reduce digital clutter, tighten systems, and automate repetitive work
-              across Microsoft 365 and Google Workspace.
+              TechTidy helps solo professionals and small teams reduce digital clutter, tighten systems,
+              and automate repetitive work across Microsoft 365 and Google Workspace.
             </p>
 
             <div class="tt-hero-cta">
@@ -88,16 +91,31 @@
             </div>
           </div>
 
+          <!-- Replaced "Common wins" with Focus Areas cubes -->
           <div class="tt-hero-right">
-            <div class="tt-panel">
-              <h2 class="tt-h2 tt-h2-sm">Common wins</h2>
-              <ul class="tt-list">
-                <li>Folder + permissions cleanup that people actually follow</li>
-                <li>Automation mini-builds that remove busywork</li>
-                <li>AI workflows that are safe, repeatable, and useful</li>
-                <li>Documentation so improvements survive Monday</li>
-              </ul>
-              <p class="tt-note">Clear scope. Documented outcomes. No chaos.</p>
+            <div class="tt-panel tt-panel-tight">
+              <h2 class="tt-h2 tt-h2-sm">Focus areas</h2>
+
+              <div class="tt-pillgrid tt-pillgrid-hero" aria-label="Focus areas">
+                <span class="tt-pill tt-pill-sand">Microsoft 365</span>
+                <span class="tt-pill tt-pill-sage">Google Workspace</span>
+
+                <span class="tt-pill tt-pill-lav">AI Coaching</span>
+                <span class="tt-pill tt-pill-rose">Automation</span>
+
+                <span class="tt-pill tt-pill-mint">Digital Decluttering</span>
+                <span class="tt-pill tt-pill-sky">Security Basics</span>
+
+                <span class="tt-pill tt-pill-sand">SharePoint / OneDrive</span>
+                <span class="tt-pill tt-pill-sage">Teams / Outlook</span>
+
+                <span class="tt-pill tt-pill-lav">Power Automate</span>
+                <span class="tt-pill tt-pill-rose">Google Admin</span>
+              </div>
+
+              <p class="tt-note tt-note-compact">
+                Clear scope. Documented outcomes. No chaos.
+              </p>
             </div>
           </div>
         </div>
@@ -160,7 +178,6 @@
             <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Discuss scope</a>
           </article>
 
-          <!-- No box: plain text block -->
           <div class="tt-plain">
             <h3 class="tt-h3">What I work in</h3>
             <p class="tt-p">
@@ -244,7 +261,7 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (removed the Focus Areas block here to avoid duplication) -->
     <section id="about" class="tt-section tt-section-alt">
       <div class="tt-container">
         <div class="grid lg:grid-cols-3 gap-10 items-start">
@@ -263,16 +280,14 @@
             </ul>
           </div>
 
-          <aside class="tt-panel">
-            <h3 class="tt-h3">Focus areas</h3>
-            <div class="tt-pillgrid">
-              <span class="tt-pill tt-pill-sand">Microsoft 365</span>
-              <span class="tt-pill tt-pill-sage">Google Workspace</span>
-              <span class="tt-pill tt-pill-lav">AI Coaching</span>
-              <span class="tt-pill tt-pill-sand">Automation</span>
-              <span class="tt-pill tt-pill-sage">Decluttering</span>
-              <span class="tt-pill tt-pill-lav">Security Basics</span>
-            </div>
+          <aside class="tt-panel tt-panel-tight">
+            <h3 class="tt-h3">How we work</h3>
+            <ul class="tt-list">
+              <li>Quick intake → clear scope</li>
+              <li>Working session (screen-share)</li>
+              <li>Written handoff + next steps</li>
+            </ul>
+            <p class="tt-note tt-note-compact">Simple, repeatable, and maintainable.</p>
           </aside>
         </div>
       </div>
