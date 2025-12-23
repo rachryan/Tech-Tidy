@@ -1,36 +1,30 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- TODO: Replace YOUR_CALENDLY_PATH and YOUR_FORMSPREE_ID below -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechTidy — Practical Tech, Everyday AI, Automation</title>
-  <meta name="description" content="TechTidy helps solo professionals and small teams clean up Microsoft 365 & Google Workspace, use AI confidently, and automate repetitive work — evenings/weekends, limited monthly slots." />
-  <meta property="og:title" content="TechTidy — Side-Hustle Consulting" />
-  <meta property="og:description" content="Retainers, rapid fixes, and lightweight projects that fit busy schedules. Evenings/weekends. Limited slots." />
-  <meta property="og:type" content="website" />
+  <title>TechTidy — Practical Tech + Automation</title>
+  <meta name="description" content="TechTidy helps solo professionals and small teams clean up Microsoft 365 & Google Workspace, use AI confidently, and automate repetitive work." />
   <meta name="theme-color" content="#141410" />
 
-  <!-- Tailwind (optional, kept for your existing layout conveniences) -->
+  <!-- Optional: keep Tailwind for quick layout utilities -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Your Anthropic-style theme + components -->
+  <!-- Site styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="tt-body antialiased">
-  <!-- Skip link (accessibility) -->
   <a class="tt-skip" href="#main">Skip to content</a>
 
-  <!-- Capacity banner -->
   <div class="tt-topbar">
     <div class="tt-container tt-topbar-inner">
       <span>Availability: <strong>Evenings/Weekends</strong> • <strong>Limited monthly slots</strong></span>
-      <a class="tt-link" href="#book">Book a session</a>
+      <a class="tt-link-invert" href="#book">Book a session</a>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="tt-header" role="banner">
     <div class="tt-container tt-header-inner">
       <a href="#home" class="tt-brand" aria-label="TechTidy home">TechTidy</a>
@@ -52,7 +46,6 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <div id="mobileMenu" class="tt-mobile" hidden>
       <div class="tt-container tt-mobile-inner">
         <a href="#offers" class="tt-mobilelink">Offers</a>
@@ -67,24 +60,15 @@
   </header>
 
   <main id="main">
-    <!-- Hero (Anthropic-style: headline left, copy right) -->
+    <!-- HERO (less Anthropic: cleaner background, less pastel tiles, more standard layout) -->
     <section id="home" class="tt-hero">
       <div class="tt-container">
         <div class="tt-hero-grid">
           <div class="tt-hero-left">
-            <h1 class="tt-h1">
-              Practical tech and automation
-              <span class="tt-h1-accent">for real people.</span>
-            </h1>
-          </div>
-
-          <div class="tt-hero-right">
+            <h1 class="tt-h1">Practical tech, AI, and automation <span class="tt-h1-accent">for busy people.</span></h1>
             <p class="tt-lead">
-              I’m <strong>Rachel</strong>. I help solo professionals and small teams clean up Microsoft 365 & Google Workspace,
-              use AI the practical way, and build lightweight automations that save hours—without adding chaos.
-            </p>
-            <p class="tt-lead">
-              The goal: fewer tabs, fewer “where is that file,” fewer repeated admin tasks—and a system you can actually maintain.
+              TechTidy helps solo professionals and small teams reduce digital clutter, tighten systems, and automate repetitive work
+              across Microsoft 365 and Google Workspace.
             </p>
 
             <div class="tt-hero-cta">
@@ -92,98 +76,73 @@
               <a href="#offers" class="tt-btn tt-btn-secondary">See offers</a>
             </div>
 
-            <dl class="tt-meta">
-              <div>
-                <dt>Platforms</dt>
-                <dd>Microsoft 365 • Google Workspace</dd>
+            <div class="tt-mini">
+              <div class="tt-mini-item">
+                <span class="tt-mini-label">Platforms</span>
+                <span class="tt-mini-value">Microsoft 365 • Google Workspace</span>
               </div>
-              <div>
-                <dt>Delivery</dt>
-                <dd>Remote • Evenings/Weekends</dd>
+              <div class="tt-mini-item">
+                <span class="tt-mini-label">Delivery</span>
+                <span class="tt-mini-value">Remote • Evenings/Weekends</span>
               </div>
-            </dl>
+            </div>
           </div>
-        </div>
 
-        <!-- 3 feature cards (Anthropic-style pastel panels) -->
-        <div class="tt-feature-grid" aria-label="Featured links">
-          <a class="tt-feature tt-sand" href="#offers">
-            <div class="tt-icon" aria-hidden="true">
-              <!-- simple line icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 7h10M7 12h10M7 17h6" />
-                <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
-              </svg>
+          <div class="tt-hero-right">
+            <div class="tt-panel">
+              <h2 class="tt-h2 tt-h2-sm">Common wins</h2>
+              <ul class="tt-list">
+                <li>Folder + permissions cleanup that people actually follow</li>
+                <li>Automation mini-builds that remove busywork</li>
+                <li>AI workflows that are safe, repeatable, and useful</li>
+                <li>Documentation so improvements survive Monday</li>
+              </ul>
+              <p class="tt-note">Clear scope. Documented outcomes. No chaos.</p>
             </div>
-            <h3>Offers that fit a busy life</h3>
-            <p>Rapid fixes, declutters, AI kickstarts, and mini-pilots—scoped cleanly.</p>
-          </a>
-
-          <a class="tt-feature tt-sage" href="#retainers">
-            <div class="tt-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 7l-8 10L4 7" />
-                <path d="M4 7h16" />
-              </svg>
-            </div>
-            <h3>Retainers: predictable help</h3>
-            <p>Monthly support for fixes, coaching, and small builds—without re-explaining everything.</p>
-          </a>
-
-          <a class="tt-feature tt-lav" href="#book">
-            <div class="tt-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 3h10v18H7z" />
-                <path d="M9 7h6M9 11h6M9 15h6" />
-              </svg>
-            </div>
-            <h3>Book a working session</h3>
-            <p>Screen-share, solve the thing, document it, and leave you with next steps.</p>
-          </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Offers -->
+    <!-- OFFERS -->
     <section id="offers" class="tt-section">
       <div class="tt-container">
         <div class="tt-section-head">
           <h2 class="tt-h2">Offers</h2>
-          <p class="tt-sub">High-leverage, short, outcome-first. Start small, see results, scale if needed.</p>
+          <p class="tt-sub">Outcome-first support. Start small, get value fast.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 mt-10">
           <article class="tt-card">
             <h3 class="tt-h3">Rapid Fix (30 min)</h3>
-            <p class="tt-p">One gnarly issue, solved fast. Screen-share, step-by-step.</p>
+            <p class="tt-p">One issue, solved fast. Screen-share, step-by-step.</p>
             <div class="tt-price">$95</div>
             <ul class="tt-list">
-              <li>Microsoft 365 or Google Workspace</li>
-              <li>Clear next steps + mini recap</li>
+              <li>M365 or Google Workspace</li>
+              <li>Mini recap + next steps</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Book now</a>
           </article>
 
           <article class="tt-card">
             <h3 class="tt-h3">Digital Declutter</h3>
-            <p class="tt-p">Folder structure that sticks. Permission sanity. Backup basics.</p>
+            <p class="tt-p">Folders, sharing, and habits that reduce file chaos.</p>
             <div class="tt-price">$750</div>
             <ul class="tt-list">
-              <li>90-min audit + tidy session</li>
+              <li>Audit + tidy session</li>
               <li>Before/After map + guide</li>
-              <li>Optional follow-up (bundle)</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Start</a>
           </article>
 
           <article class="tt-card">
             <h3 class="tt-h3">AI Kickstart</h3>
-            <p class="tt-p">Real-world prompts, data safety, and weekly use cases.</p>
+            <p class="tt-p">Practical prompts, data safety, and workflows you’ll use.</p>
             <div class="tt-price">$1,150</div>
             <ul class="tt-list">
-              <li>90-min session + prompt kit</li>
-              <li>Guardrails & workflows</li>
-              <li>30-min follow-up</li>
+              <li>Session + prompt kit</li>
+              <li>Guardrails + templates</li>
+              <li>Follow-up check-in</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Book discovery</a>
           </article>
@@ -197,23 +156,23 @@
             <ul class="tt-list">
               <li>Process map + build + test</li>
               <li>Impact estimate + next steps</li>
-              <li>Optional “care plan” retainer</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Discuss scope</a>
           </article>
 
-          <article class="tt-card tt-card-soft">
+          <!-- Removed "What I work in" BOX per request -->
+          <div class="tt-plain">
             <h3 class="tt-h3">What I work in</h3>
             <p class="tt-p">
               OneDrive/SharePoint • Teams • Outlook • Power Automate • Drive • Docs/Sheets/Slides • Gmail • Admin Console
             </p>
             <p class="tt-note">Evening/weekend delivery. Clear scope. Documented outcomes.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Retainers -->
+    <!-- RETAINERS -->
     <section id="retainers" class="tt-section tt-section-alt">
       <div class="tt-container">
         <div class="tt-section-head">
@@ -227,7 +186,7 @@
             <div class="tt-price">$300 <span class="tt-price-sub">/mo</span></div>
             <ul class="tt-list">
               <li>60 min support/month</li>
-              <li>Email/DM “quick questions”</li>
+              <li>Quick questions</li>
               <li>Issue log + mini how-tos</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-primary tt-btn-full">Get started</a>
@@ -249,7 +208,7 @@
             <div class="tt-price">$500 <span class="tt-price-sub">/mo</span></div>
             <ul class="tt-list">
               <li>120 min support/month</li>
-              <li>Monthly automation tune-ups</li>
+              <li>Automation tune-ups</li>
               <li>Mini training refresh</li>
             </ul>
             <a href="#book" class="tt-btn tt-btn-secondary tt-btn-full">Choose Pro</a>
@@ -260,7 +219,7 @@
       </div>
     </section>
 
-    <!-- Results -->
+    <!-- RESULTS -->
     <section id="results" class="tt-section">
       <div class="tt-container">
         <div class="tt-section-head">
@@ -282,66 +241,49 @@
             <p class="tt-stat-label">Clients use 3+ AI prompts weekly</p>
           </li>
         </ul>
-
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
-          <figure class="tt-quote">
-            <blockquote>“Our file chaos finally makes sense. We stopped emailing attachments and actually trust our folders.”</blockquote>
-            <figcaption>— Program Lead, education nonprofit</figcaption>
-          </figure>
-          <figure class="tt-quote">
-            <blockquote>“The automation paid for itself in a month. Admin time dropped to minutes.”</blockquote>
-            <figcaption>— Owner, small services business</figcaption>
-          </figure>
-          <figure class="tt-quote">
-            <blockquote>“Rachel teaches AI without hype. Clear, safe, immediately useful.”</blockquote>
-            <figcaption>— Department Head, public sector</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="tt-section tt-section-alt">
       <div class="tt-container">
         <div class="grid lg:grid-cols-3 gap-10 items-start">
           <div class="lg:col-span-2">
             <h2 class="tt-h2">About</h2>
             <p class="tt-sub mt-4">
-              With 20+ years in technology, I’ve seen how easily systems get messy—especially when you’re busy doing the real work.
-              If your tools are fighting you, we fix the foundation and make it stick.
+              I’m Rachel. I help people make their tools usable again—without over-engineering.
+              We fix what’s broken, tidy what’s messy, and leave you with a system you can maintain.
             </p>
             <ul class="tt-list mt-6">
-              <li>Clean folder structure (Microsoft 365 & Google Workspace)</li>
-              <li>Practical AI for writing, notes, and decisions (with guardrails)</li>
-              <li>Automation that saves hours without adding complexity</li>
-              <li>Security basics: passwords, sharing, sensible habits</li>
-              <li>Documentation so changes survive Monday</li>
+              <li>Microsoft 365 & Google Workspace cleanups</li>
+              <li>Practical AI coaching (with guardrails)</li>
+              <li>Automation that removes busywork</li>
+              <li>Security basics: sharing + passwords</li>
+              <li>Documentation + handoff</li>
             </ul>
           </div>
 
-          <aside class="tt-card tt-card-soft">
+          <aside class="tt-panel">
             <h3 class="tt-h3">Focus areas</h3>
             <div class="tt-pillgrid">
               <span class="tt-pill">Microsoft 365</span>
               <span class="tt-pill">Google Workspace</span>
               <span class="tt-pill">AI Coaching</span>
-              <span class="tt-pill">Workflow Design</span>
               <span class="tt-pill">Automation</span>
-              <span class="tt-pill">Digital Decluttering</span>
+              <span class="tt-pill">Decluttering</span>
               <span class="tt-pill">Security Basics</span>
-              <span class="tt-pill">Change Management</span>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- Booking -->
+    <!-- BOOKING -->
     <section id="book" class="tt-section">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
           <h2 class="tt-h2">Book a session</h2>
-          <p class="tt-sub">Pick a time that works. You’ll get a short intake so we can hit the ground running.</p>
+          <p class="tt-sub">Pick a time. You’ll get a short intake so we can hit the ground running.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8 mt-10">
@@ -388,34 +330,34 @@
 
         <div class="grid md:grid-cols-2 gap-6 mt-10">
           <article class="tt-card">
-            <h3 class="tt-h3">Do you work remotely?</h3>
-            <p class="tt-p">Yes—most sessions are on Zoom with screen-share. On-site may be possible depending on location and scope.</p>
+            <h3 class="tt-h3">Remote only?</h3>
+            <p class="tt-p">Mostly remote (Zoom + screen-share). On-site may be possible depending on scope and location.</p>
           </article>
 
           <article class="tt-card">
             <h3 class="tt-h3">Individuals or teams?</h3>
-            <p class="tt-p">Both. Many clients start solo, then bring the team once the foundation is tidy.</p>
+            <p class="tt-p">Both. Many clients start solo, then roll improvements into the team once it works.</p>
           </article>
 
           <article class="tt-card">
             <h3 class="tt-h3">How do retainers work?</h3>
-            <p class="tt-p">Prepay monthly time at a discount. Use for fixes, coaching, or small builds. Unused time rolls 30 days.</p>
+            <p class="tt-p">Prepay monthly time. Use for fixes, coaching, or small builds. Unused time rolls 30 days.</p>
           </article>
 
           <article class="tt-card">
             <h3 class="tt-h3">Urgent help?</h3>
-            <p class="tt-p">Book the fastest slot you see; add “urgent” to the notes. I’ll confirm if I can expedite.</p>
+            <p class="tt-p">Book the fastest slot and add “urgent” in notes. I’ll confirm if I can expedite.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="tt-section">
       <div class="tt-container max-w-3xl">
         <div class="tt-section-head">
           <h2 class="tt-h2">Contact</h2>
-          <p class="tt-sub">Tell me a little about your goals. I’ll reply within one business day (evenings/weekends).</p>
+          <p class="tt-sub">Tell me what you’re trying to improve. I’ll reply within one business day.</p>
         </div>
 
         <form id="contactForm" class="tt-card mt-10" aria-label="Contact form">
@@ -448,8 +390,8 @@
             <button id="submitBtn" type="submit" class="tt-btn tt-btn-primary">Send message</button>
           </div>
 
-          <p id="formSuccess" class="tt-success hidden mt-3">Thanks — I’ve got your message and will reply within one business day.</p>
-          <p id="formError" class="tt-error hidden mt-3">Something went wrong. Please try again or email me directly.</p>
+          <p id="formSuccess" class="tt-success hidden mt-3">Thanks — I’ve got your message and will reply soon.</p>
+          <p id="formError" class="tt-error hidden mt-3">Something went wrong. Please try again.</p>
         </form>
       </div>
     </section>
@@ -457,11 +399,10 @@
 
   <footer class="tt-footer">
     <div class="tt-container tt-footer-inner">
-      <p>© <span id="year"></span> TechTidy. All rights reserved.</p>
+      <p>© <span id="year"></span> TechTidy.</p>
       <nav aria-label="Footer">
         <a class="tt-link" href="#offers">Offers</a>
         <a class="tt-link" href="#retainers">Retainers</a>
-        <a class="tt-link" href="#results">Results</a>
         <a class="tt-link" href="#book">Book</a>
         <a class="tt-link" href="#contact">Contact</a>
       </nav>
@@ -469,7 +410,6 @@
   </footer>
 
   <script>
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Mobile menu toggle
@@ -482,17 +422,16 @@
         mobileMenu.hidden = isOpen;
       });
 
-      // Close menu when a link is clicked
       mobileMenu.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target && target.tagName === 'A') {
+        const t = e.target;
+        if (t && t.tagName === 'A') {
           menuBtn.setAttribute('aria-expanded', 'false');
           mobileMenu.hidden = true;
         }
       });
     }
 
-    // Formspree endpoints (replace with your own)
+    // Replace with your Formspree IDs
     const FORMSPREE_CONTACT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
     const FORMSPREE_WAITLIST = "https://formspree.io/f/YOUR_FORMSPREE_ID";
 
@@ -513,11 +452,10 @@
       } catch (e) {
         errorEl.classList.remove('hidden');
       } finally {
-        if (button) { button.disabled = false; button.textContent = idleText || 'Send message'; }
+        if (button) { button.disabled = false; button.textContent = idleText || 'Send'; }
       }
     }
 
-    // Contact form
     const contactForm = document.getElementById('contactForm');
     const contactSuccess = document.getElementById('formSuccess');
     const contactError = document.getElementById('formError');
@@ -530,7 +468,6 @@
       });
     }
 
-    // Waitlist form
     const waitlistForm = document.getElementById('waitlistForm');
     const waitlistSuccess = document.getElementById('waitlistSuccess');
     const waitlistError = document.getElementById('waitlistError');
