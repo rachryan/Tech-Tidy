@@ -10,7 +10,7 @@
   --panel: #ffffff;
   --panel-soft: rgba(255,255,255,0.65);
 
-  /* TechTidy soft palette (same family, more variety) */
+  /* Soft palette */
   --sand: #EDE8DF;
   --sage: #DCE8E3;
   --lav:  #E2E3F0;
@@ -56,6 +56,7 @@ html{ scroll-behavior: smooth; }
   z-index: 1000;
 }
 
+/* Topbar */
 .tt-topbar{
   background: var(--text);
   color: #fff;
@@ -78,6 +79,7 @@ html{ scroll-behavior: smooth; }
 }
 .tt-link-invert:hover{ opacity: 1; }
 
+/* Header */
 .tt-header{
   position: sticky;
   top: 0;
@@ -93,7 +95,6 @@ html{ scroll-behavior: smooth; }
   padding: 14px 0;
   gap: 16px;
 }
-
 .tt-brand{
   font-weight: 650;
   font-size: 20px;
@@ -152,6 +153,7 @@ html{ scroll-behavior: smooth; }
   .tt-menu-btn{ display:none; }
 }
 
+/* Hero */
 .tt-hero{
   padding: 64px 0 34px;
 }
@@ -176,17 +178,27 @@ html{ scroll-behavior: smooth; }
 }
 .tt-h1-accent{ display:block; }
 
+.tt-qualifier{
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  max-width: 46rem;
+}
+
 .tt-lead{
   font-size: 18px;
   color: var(--muted);
   line-height: 1.65;
-  margin-top: 14px;
+  margin-top: 12px;
+  max-width: 46rem;
 }
 
 .tt-hero-cta{
   display:flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 18px;
 }
 
@@ -215,6 +227,7 @@ html{ scroll-behavior: smooth; }
   font-weight: 600;
 }
 
+/* Sections */
 .tt-section{
   padding: 68px 0;
 }
@@ -260,6 +273,16 @@ html{ scroll-behavior: smooth; }
 }
 .tt-note-compact{ margin-top: 12px; }
 
+/* Offer helper line */
+.tt-kicker{
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  opacity: 0.92;
+}
+
+/* Buttons */
 .tt-btn{
   display:inline-flex;
   align-items:center;
@@ -288,11 +311,24 @@ html{ scroll-behavior: smooth; }
 }
 .tt-btn-secondary:hover{ opacity: 0.95; }
 
+.tt-btn-link{
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  opacity: 0.9;
+}
+.tt-btn-link:hover{ opacity: 1; }
+
 .tt-btn-full{
   width: 100%;
   margin-top: 16px;
 }
 
+/* Cards / Panels */
 .tt-card{
   background: var(--panel);
   border: 1px solid var(--border-soft);
@@ -333,11 +369,24 @@ html{ scroll-behavior: smooth; }
 }
 .tt-list li{ margin: 6px 0; }
 
-.tt-plain{
-  padding: 6px 2px;
+/* CTA block (soft contact earlier) */
+.tt-cta{
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  background: rgba(255,255,255,0.70);
 }
-.tt-plain .tt-p{ margin-top: 10px; }
+.tt-cta-soft{
+  background: linear-gradient(0deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
+}
+.tt-cta-actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
 
+/* Stats */
 .tt-stat{
   border-radius: var(--radius-lg);
   padding: 18px;
@@ -356,37 +405,46 @@ html{ scroll-behavior: smooth; }
   font-size: 13px;
 }
 
-/* Focus area cubes (bigger, clearer) */
+/* Focus area “cubes” with benefits */
 .tt-pillgrid{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
   margin-top: 14px;
 }
-
 .tt-pillgrid-hero{
   gap: 14px;
 }
 
 .tt-pill{
   display:flex;
+  flex-direction: column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding: 18px 16px;         /* bigger */
-  border-radius: 16px;        /* more “cube” */
-  font-size: 16px;            /* bigger text */
-  font-weight: 700;
-  color: var(--text);
+  padding: 18px 16px;
+  border-radius: 16px;
   border: 1px solid rgba(20,20,16,0.10);
-  min-height: 64px;           /* consistent size */
+  min-height: 74px;
+}
+.tt-pill-title{
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.tt-pill-sub{
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(20,20,16,0.68);
 }
 
 @media (min-width: 1024px){
-  .tt-pill{ min-height: 70px; }
+  .tt-pill{ min-height: 82px; }
 }
 
-/* color variants */
+/* Color variants */
 .tt-pill-sand{ background: var(--sand); }
 .tt-pill-sage{ background: var(--sage); }
 .tt-pill-lav{  background: var(--lav);  }
@@ -394,6 +452,7 @@ html{ scroll-behavior: smooth; }
 .tt-pill-mint{ background: var(--mint); }
 .tt-pill-sky{  background: var(--sky);  }
 
+/* Frames + forms */
 .tt-frame{
   background: #fff;
   border: 1px solid var(--border-soft);
@@ -435,6 +494,7 @@ html{ scroll-behavior: smooth; }
   font-size: 13px;
 }
 
+/* Footer */
 .tt-footer{
   border-top: 1px solid var(--border);
   padding: 26px 0;
