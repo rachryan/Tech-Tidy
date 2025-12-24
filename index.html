@@ -69,7 +69,6 @@
               <span class="tt-h1-accent">for busy people.</span>
             </h1>
 
-            <!-- Audience qualifier (new) -->
             <p class="tt-qualifier">
               For <strong>solo professionals</strong> and <strong>small teams</strong> who are drowning in tools, files, and half-working systems.
             </p>
@@ -79,7 +78,6 @@
               so your setup actually supports your day.
             </p>
 
-            <!-- One primary CTA (new) -->
             <div class="tt-hero-cta">
               <a href="#book" class="tt-btn tt-btn-primary">Book a session</a>
               <a href="#offers" class="tt-btn tt-btn-link">View services</a>
@@ -97,7 +95,6 @@
             </div>
           </div>
 
-          <!-- Focus Areas cubes: translated into benefits (new) -->
           <div class="tt-hero-right">
             <div class="tt-panel tt-panel-tight">
               <h2 class="tt-h2 tt-h2-sm">Focus areas</h2>
@@ -205,21 +202,19 @@
           </article>
         </div>
 
+        <!-- Soft contact CTA earlier -->
+        <aside class="tt-cta tt-cta-soft" aria-label="Not sure what you need CTA">
+          <h3 class="tt-h3">Not sure what you need?</h3>
+          <p class="tt-p">
+            Send a quick note. I’ll point you to the right offer (or tell you if you don’t need me).
+          </p>
+          <div class="tt-cta-actions">
+            <a href="#contact" class="tt-btn tt-btn-secondary">Send a note</a>
+            <a href="#book" class="tt-btn tt-btn-primary">Book anyway</a>
+          </div>
+          <p class="tt-note tt-note-compact">Reply within one business day.</p>
+        </aside>
 
-
-          <!-- Soft contact CTA earlier (new) -->
-          <aside class="tt-cta tt-cta-soft" aria-label="Not sure what you need CTA">
-            <h3 class="tt-h3">Not sure what you need?</h3>
-            <p class="tt-p">
-              Send a quick note. I’ll point you to the right offer (or tell you if you don’t need me).
-            </p>
-            <div class="tt-cta-actions">
-              <a href="#contact" class="tt-btn tt-btn-secondary">Send a note</a>
-              <a href="#book" class="tt-btn tt-btn-primary">Book anyway</a>
-            </div>
-            <p class="tt-note tt-note-compact">Reply within one business day.</p>
-          </aside>
-        </div>
       </div>
     </section>
 
@@ -389,13 +384,20 @@
           <p class="tt-sub">Tell me what you’re trying to improve. I’ll reply within one business day.</p>
         </div>
 
-        <form id="contactForm"
-      class="tt-card mt-10"
-      aria-label="Contact form"
-      method="POST"
-      action="https://formspree.io/f/movgnywr">
-
-           class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <form
+          id="contactForm"
+          class="tt-card mt-10"
+          aria-label="Contact form"
+          method="POST"
+          action="https://formspree.io/f/movgnywr"
+        >
+          <!-- Honeypot (spam trap). Hidden from users, but bots often fill it. -->
+          <div style="position:absolute; left:-5000px;" aria-hidden="true">
+            <label>
+              Leave this field empty:
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
 
           <div class="grid md:grid-cols-2 gap-4">
             <label class="tt-field">
@@ -421,7 +423,7 @@
 
           <div class="flex items-center justify-between gap-4 flex-wrap">
             <div class="tt-note">No spam. No sharing your details.</div>
-            <button id="submitBtn" <button type="submit">Send</button>
+            <button id="submitBtn" class="tt-btn tt-btn-primary" type="submit">Send</button>
           </div>
 
           <p id="formSuccess" class="tt-success hidden mt-3">Thanks — I’ve got your message and will reply soon.</p>
@@ -465,17 +467,25 @@
       });
     }
 
-    // Replace with your Formspree ID
+    // Formspree endpoint
     const FORMSPREE_CONTACT = "https://formspree.io/f/movgnywr";
 
     async function submitForm(form, endpoint, successEl, errorEl, button, idleText) {
       successEl.classList.add('hidden');
       errorEl.classList.add('hidden');
-      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Sending…';
+      }
 
       try {
         const data = new FormData(form);
-        const res = await fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data });
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
         if (res.ok) {
           form.reset();
           successEl.classList.remove('hidden');
@@ -485,7 +495,10 @@
       } catch (e) {
         errorEl.classList.remove('hidden');
       } finally {
-        if (button) { button.disabled = false; button.textContent = idleText || 'Send'; }
+        if (button) {
+          button.disabled = false;
+          button.textContent = idleText || 'Send';
+        }
       }
     }
 
@@ -497,7 +510,7 @@
     if (contactForm) {
       contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        submitForm(contactForm, FORMSPREE_CONTACT, contactSuccess, contactError, contactBtn, 'Send message');
+        submitForm(contactForm, FORMSPREE_CONTACT, contactSuccess, contactError, contactBtn, 'Send');
       });
     }
   </script>
