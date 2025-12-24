@@ -20,6 +20,10 @@
 
   --radius: 12px;
   --radius-lg: 14px;
+
+  /* NEW: Section accent fills (match cube/pill tones) */
+  --cta-bg: rgba(220,232,227,0.65);     /* sage */
+  --results-bg: rgba(222,228,242,0.65); /* sky */
 }
 
 html{ scroll-behavior: smooth; }
@@ -361,12 +365,17 @@ body{ margin: 0; }
   flex-wrap: wrap;
 }
 .tt-cta-soft{
-  background: rgba(255,255,255,0.70);
+  background: var(--cta-bg); /* UPDATED */
   box-shadow: 0 10px 26px rgba(20,20,16,0.04);
 }
 
 /* Results */
-.tt-stat{ padding: 18px; background: rgba(255,255,255,0.75); }
+.tt-stat{
+  padding: 18px;
+  background: var(--results-bg); /* UPDATED */
+  border: 1px solid var(--border-soft); /* ensure consistent border */
+  border-radius: var(--radius-lg);
+}
 .tt-stat-grid{ list-style: none; padding-left: 0; margin: 0; }
 .tt-stat-num{ font-weight: 780; font-size: 22px; letter-spacing: -0.02em; }
 .tt-stat-label{ margin: 8px 0 0; color: var(--muted); line-height: 1.55; }
