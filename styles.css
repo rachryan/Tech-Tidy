@@ -32,11 +32,18 @@ body{ margin: 0; }
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
+/* Helpers */
+.hidden{ display:none !important; }
+.mt-4{ margin-top: 1rem; }
+.mt-10{ margin-top: 2.5rem; }
+
 .tt-container{
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px;
 }
+.max-w-5xl{ max-width: 960px; }
+.max-w-3xl{ max-width: 768px; }
 
 /* Accessibility */
 .tt-skip{
@@ -105,7 +112,6 @@ body{ margin: 0; }
   text-decoration: none;
   color: var(--text);
 }
-
 .tt-nav{
   display:none;
   gap: 22px;
@@ -142,14 +148,12 @@ body{ margin: 0; }
 }
 .tt-btn:hover{ background: #fff; }
 .tt-btn:disabled{ opacity: 0.6; cursor: not-allowed; }
-
 .tt-btn-primary{
   background: var(--text);
   color: #fff;
   border-color: rgba(20,20,16,0.85);
 }
 .tt-btn-primary:hover{ background: #0f0f0d; }
-
 .tt-btn-secondary{
   background: rgba(255,255,255,0.85);
   color: var(--text);
@@ -166,6 +170,7 @@ body{ margin: 0; }
   cursor: pointer;
 }
 
+/* Mobile menu */
 .tt-mobile{
   border-bottom: 1px solid var(--border);
   background: rgba(247,247,245,0.96);
@@ -183,7 +188,6 @@ body{ margin: 0; }
   text-decoration: none;
   color: var(--text);
 }
-
 @media (min-width: 768px){
   .tt-nav{ display:flex; }
   .tt-menu-btn{ display:none; }
@@ -221,7 +225,6 @@ body{ margin: 0; }
   color: var(--text);
   max-width: 46rem;
 }
-
 .tt-lead{
   font-size: 18px;
   color: var(--muted);
@@ -229,14 +232,12 @@ body{ margin: 0; }
   margin-top: 12px;
   max-width: 46rem;
 }
-
 .tt-hero-cta{
   display:flex;
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 18px;
 }
-
 .tt-note{
   margin-top: 14px;
   color: var(--muted);
@@ -283,6 +284,22 @@ body{ margin: 0; }
   line-height: 1.65;
 }
 
+/* Grids (NO Tailwind required) */
+.tt-grid-3{
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 900px){
+  .tt-grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.tt-grid-2{
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 900px){
+  .tt-grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Panels / cards */
 .tt-panel,
 .tt-card,
@@ -295,7 +312,7 @@ body{ margin: 0; }
 }
 
 .tt-panel{
-  padding: 18px 18px;
+  padding: 18px;
 }
 
 .tt-card{
@@ -340,7 +357,7 @@ body{ margin: 0; }
 /* CTA */
 .tt-cta{
   margin-top: 28px;
-  padding: 18px 18px;
+  padding: 18px;
 }
 .tt-cta-actions{
   display:flex;
@@ -358,6 +375,7 @@ body{ margin: 0; }
   padding: 18px;
   background: rgba(255,255,255,0.75);
 }
+.tt-stat-grid{ list-style: none; padding-left: 0; margin: 0; }
 .tt-stat-num{
   font-weight: 780;
   font-size: 22px;
@@ -375,13 +393,23 @@ body{ margin: 0; }
   padding: 10px;
   overflow: hidden;
 }
-.tt-frame iframe{
+.tt-iframe{
+  width: 100%;
+  height: 680px;
   border: 0;
   border-radius: 12px;
   background: #fff;
 }
 
 /* Contact form */
+.tt-form-row{
+  display:grid;
+  gap: 14px;
+}
+@media (min-width: 900px){
+  .tt-form-row{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 .tt-field{
   display:flex;
   flex-direction: column;
@@ -389,12 +417,13 @@ body{ margin: 0; }
   color: var(--text);
   font-size: 14px;
   font-weight: 650;
+  margin-top: 14px;
 }
 .tt-field input,
 .tt-field textarea{
   font: inherit;
   font-weight: 500;
-  padding: 12px 12px;
+  padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.92);
@@ -405,7 +434,22 @@ body{ margin: 0; }
   border-color: rgba(20,20,16,0.35);
 }
 
+.tt-form-actions{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.tt-honeypot{
+  position:absolute;
+  left:-5000px;
+}
+
 .tt-success{
+  margin-top: 12px;
   color: #0f5132;
   background: rgba(209, 231, 221, 0.7);
   border: 1px solid rgba(15,81,50,0.18);
@@ -413,6 +457,7 @@ body{ margin: 0; }
   border-radius: 12px;
 }
 .tt-error{
+  margin-top: 12px;
   color: #842029;
   background: rgba(248, 215, 218, 0.7);
   border: 1px solid rgba(132,32,41,0.18);
@@ -440,7 +485,7 @@ body{ margin: 0; }
 }
 .tt-link:hover{ color: var(--text); }
 
-/* ===== FIX: About “How we work” should be a box ===== */
+/* ===== About “How we work” BOX (THIS is the fix) ===== */
 .how-we-work-box{
   margin-top: 18px;
   padding: 20px;
