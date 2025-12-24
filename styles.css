@@ -368,6 +368,49 @@ html{ scroll-behavior: smooth; }
   line-height: 1.6;
 }
 .tt-list li{ margin: 6px 0; }
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+/* Cards */
+.card {
+  background: var(--panel);
+  border-radius: var(--radius-lg);
+}
+
+/* About section – How we work box */
+.how-we-work-box {
+  margin-top: 2.5rem;
+  padding: 1.75rem 2rem;
+  max-width: 520px;
+
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.how-we-work-box h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.how-we-work-box ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.how-we-work-box li {
+  margin-bottom: 0.5rem;
+}
+
+.how-we-work-note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
 
 /* CTA block (soft contact earlier) */
 .tt-cta{
