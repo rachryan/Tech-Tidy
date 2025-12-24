@@ -57,10 +57,11 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
+    <!-- HERO (UPDATED: brings back Focus areas pill panel on the right) -->
     <section id="home" class="tt-hero">
       <div class="tt-container">
         <div class="tt-hero-grid">
+
           <div class="tt-hero-left">
             <h1 class="tt-h1">
               Practical tech, AI, and automation
@@ -84,14 +85,63 @@
             <p class="tt-note">Remote (screen-share). Clear scope. Written handoff.</p>
           </div>
 
-          <aside class="tt-panel" aria-label="Quick summary">
-            <h2 class="tt-h3">Quick win focus</h2>
-            <ul class="tt-list">
-              <li>Clean up your “where is that file?” mess</li>
-              <li>Make AI useful (and safe) for real work</li>
-              <li>Remove repetitive busywork</li>
-            </ul>
-          </aside>
+          <div class="tt-hero-right">
+            <div class="tt-panel tt-panel-tight">
+              <h2 class="tt-h2 tt-h2-sm">Focus areas</h2>
+
+              <div class="tt-pillgrid tt-pillgrid-hero" aria-label="Focus areas and outcomes">
+                <div class="tt-pill tt-pill-sand">
+                  <span class="tt-pill-title">Microsoft 365</span>
+                  <span class="tt-pill-sub">Simplify files &amp; sharing</span>
+                </div>
+                <div class="tt-pill tt-pill-sage">
+                  <span class="tt-pill-title">Google Workspace</span>
+                  <span class="tt-pill-sub">Cleaner Drive + Admin</span>
+                </div>
+
+                <div class="tt-pill tt-pill-lav">
+                  <span class="tt-pill-title">AI Coaching</span>
+                  <span class="tt-pill-sub">Useful + safe habits</span>
+                </div>
+                <div class="tt-pill tt-pill-rose">
+                  <span class="tt-pill-title">Automation</span>
+                  <span class="tt-pill-sub">Remove repeat work</span>
+                </div>
+
+                <div class="tt-pill tt-pill-mint">
+                  <span class="tt-pill-title">Decluttering</span>
+                  <span class="tt-pill-sub">Make it maintainable</span>
+                </div>
+                <div class="tt-pill tt-pill-sky">
+                  <span class="tt-pill-title">Security Basics</span>
+                  <span class="tt-pill-sub">Reduce access risk</span>
+                </div>
+
+                <div class="tt-pill tt-pill-sand">
+                  <span class="tt-pill-title">SharePoint / OneDrive</span>
+                  <span class="tt-pill-sub">Structure that sticks</span>
+                </div>
+                <div class="tt-pill tt-pill-sage">
+                  <span class="tt-pill-title">Teams / Outlook</span>
+                  <span class="tt-pill-sub">Less chaos, faster find</span>
+                </div>
+
+                <div class="tt-pill tt-pill-lav">
+                  <span class="tt-pill-title">Power Automate</span>
+                  <span class="tt-pill-sub">Approvals &amp; routing</span>
+                </div>
+                <div class="tt-pill tt-pill-rose">
+                  <span class="tt-pill-title">Passwords / Access</span>
+                  <span class="tt-pill-sub">Simple controls</span>
+                </div>
+              </div>
+
+              <p class="tt-note tt-note-compact">
+                Clear scope. Documented outcomes. No chaos.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -139,12 +189,9 @@
           </article>
         </div>
 
-        <!-- Soft contact CTA earlier -->
         <aside class="tt-cta tt-cta-soft" aria-label="Not sure what you need">
           <h3 class="tt-h3">Not sure what you need?</h3>
-          <p class="tt-p">
-            Send a quick note. I’ll point you to the right offer (or tell you if you don’t need me).
-          </p>
+          <p class="tt-p">Send a quick note. I’ll point you to the right offer (or tell you if you don’t need me).</p>
           <div class="tt-cta-actions">
             <a href="#contact" class="tt-btn tt-btn-secondary">Send a note</a>
             <a href="#book" class="tt-btn tt-btn-primary">Book anyway</a>
@@ -226,7 +273,7 @@
       </div>
     </section>
 
-    <!-- ABOUT (FIXED: box under About; services list removed) -->
+    <!-- ABOUT -->
     <section id="about" class="tt-section tt-section-alt">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
@@ -260,7 +307,6 @@
 
         <div class="mt-10">
           <div class="tt-frame">
-            <!-- Replace this Calendly URL with yours if different -->
             <iframe
               src="https://calendly.com/tech_tidy/30min"
               class="tt-iframe"
@@ -274,7 +320,7 @@
       </div>
     </section>
 
-    <!-- FAQ (CUBES) -->
+    <!-- FAQ -->
     <section id="faq" class="tt-section tt-section-alt">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
@@ -320,7 +366,6 @@
           method="POST"
           action="https://formspree.io/f/movgnywr"
         >
-          <!-- Honeypot -->
           <div class="tt-honeypot" aria-hidden="true">
             <label>
               Leave this field empty:
@@ -377,7 +422,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
     const menuBtn = document.querySelector('.tt-menu-btn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
@@ -396,7 +440,6 @@
       });
     }
 
-    // Formspree endpoint (matches form action)
     const FORMSPREE_CONTACT = "https://formspree.io/f/movgnywr";
 
     async function submitForm(form, endpoint, successEl, errorEl, button, idleText) {
