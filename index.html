@@ -7,16 +7,13 @@
   <title>TechTidy — Practical Tech + Automation</title>
   <meta name="description" content="TechTidy helps solo professionals and small teams clean up tools, use AI confidently, and automate repetitive work." />
   <meta name="theme-color" content="#141410" />
-
-  <!-- Optional: Tailwind for grid utilities used below -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="tt-body antialiased">
+<body class="tt-body">
   <a class="tt-skip" href="#main">Skip to content</a>
 
+  <!-- Topbar -->
   <div class="tt-topbar">
     <div class="tt-container tt-topbar-inner">
       <span>Availability: <strong>Evenings/Weekends</strong> • <strong>Limited monthly slots</strong></span>
@@ -24,6 +21,7 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header class="tt-header" role="banner">
     <div class="tt-container tt-header-inner">
       <a href="#home" class="tt-brand" aria-label="TechTidy home">TechTidy</a>
@@ -98,7 +96,7 @@
       </div>
     </section>
 
-    <!-- OFFERS -->
+    <!-- OFFERS (CUBES) -->
     <section id="offers" class="tt-section tt-section-alt">
       <div class="tt-container">
         <div class="tt-section-head">
@@ -106,7 +104,7 @@
           <p class="tt-sub">Pick the level of support you want. We keep it simple and usable.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="tt-grid-3 mt-10">
           <article class="tt-card">
             <h3 class="tt-h3">Tidy + Fix</h3>
             <p class="tt-p">Clean up the system you already have. Fix what’s breaking your flow.</p>
@@ -142,7 +140,7 @@
         </div>
 
         <!-- Soft contact CTA earlier -->
-        <aside class="tt-cta tt-cta-soft" aria-label="Not sure what you need CTA">
+        <aside class="tt-cta tt-cta-soft" aria-label="Not sure what you need">
           <h3 class="tt-h3">Not sure what you need?</h3>
           <p class="tt-p">
             Send a quick note. I’ll point you to the right offer (or tell you if you don’t need me).
@@ -153,11 +151,10 @@
           </div>
           <p class="tt-note tt-note-compact">Reply within one business day.</p>
         </aside>
-
       </div>
     </section>
 
-    <!-- RETAINERS -->
+    <!-- RETAINERS (CUBES) -->
     <section id="retainers" class="tt-section tt-section-alt">
       <div class="tt-container">
         <div class="tt-section-head">
@@ -165,7 +162,7 @@
           <p class="tt-sub">Predictable help that keeps you moving between projects.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="tt-grid-3 mt-10">
           <article class="tt-card">
             <h3 class="tt-h3">Essentials</h3>
             <div class="tt-price">$300 <span class="tt-price-sub">/mo</span></div>
@@ -212,7 +209,7 @@
           <p class="tt-sub">Practical outcomes you can feel in your week.</p>
         </div>
 
-        <ul class="grid sm:grid-cols-3 gap-6 mt-10">
+        <ul class="tt-grid-3 mt-10 tt-stat-grid">
           <li class="tt-stat">
             <div class="tt-stat-num">10–20 hrs/mo</div>
             <p class="tt-stat-label">Typical time saved after one automation</p>
@@ -229,7 +226,7 @@
       </div>
     </section>
 
-    <!-- ABOUT (FIXED: uses tt-section + box styling class) -->
+    <!-- ABOUT (FIXED: box under About; services list removed) -->
     <section id="about" class="tt-section tt-section-alt">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
@@ -243,19 +240,17 @@
 
         <div class="how-we-work-box" aria-label="How we work">
           <h3 class="tt-h3">How we work</h3>
-
           <ul class="tt-list">
             <li>Quick intake → clear scope</li>
             <li>Working session (screen-share)</li>
             <li>Written handoff + next steps</li>
           </ul>
-
           <p class="tt-note tt-note-compact">Simple. Repeatable. Maintainable.</p>
         </div>
       </div>
     </section>
 
-    <!-- BOOKING -->
+    <!-- BOOK -->
     <section id="book" class="tt-section">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
@@ -265,9 +260,10 @@
 
         <div class="mt-10">
           <div class="tt-frame">
+            <!-- Replace this Calendly URL with yours if different -->
             <iframe
               src="https://calendly.com/tech_tidy/30min"
-              class="w-full h-[680px]"
+              class="tt-iframe"
               title="Book with TechTidy"></iframe>
           </div>
 
@@ -278,14 +274,14 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (CUBES) -->
     <section id="faq" class="tt-section tt-section-alt">
       <div class="tt-container max-w-5xl">
         <div class="tt-section-head">
           <h2 class="tt-h2">FAQ</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-10">
+        <div class="tt-grid-2 mt-10">
           <article class="tt-card">
             <h3 class="tt-h3">Remote only?</h3>
             <p class="tt-p">Mostly remote (Zoom + screen-share). On-site may be possible depending on scope and location.</p>
@@ -322,17 +318,17 @@
           class="tt-card mt-10"
           aria-label="Contact form"
           method="POST"
-          action="https://formspree.io/f/xzdpweel"
+          action="https://formspree.io/f/movgnywr"
         >
-          <!-- Honeypot (spam trap) -->
-          <div style="position:absolute; left:-5000px;" aria-hidden="true">
+          <!-- Honeypot -->
+          <div class="tt-honeypot" aria-hidden="true">
             <label>
               Leave this field empty:
               <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
             </label>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-4">
+          <div class="tt-form-row">
             <label class="tt-field">
               <span>Name</span>
               <input id="name" type="text" name="name" required />
@@ -354,13 +350,13 @@
             <textarea id="message" name="message" rows="5" required></textarea>
           </label>
 
-          <div class="flex items-center justify-between gap-4 flex-wrap">
-            <div class="tt-note">No spam. No sharing your details.</div>
+          <div class="tt-form-actions">
+            <div class="tt-note tt-note-compact">No spam. No sharing your details.</div>
             <button id="submitBtn" class="tt-btn tt-btn-primary" type="submit">Send</button>
           </div>
 
-          <p id="formSuccess" class="tt-success hidden mt-3">Thanks — I’ve got your message and will reply soon.</p>
-          <p id="formError" class="tt-error hidden mt-3">Something went wrong. Please try again.</p>
+          <p id="formSuccess" class="tt-success hidden">Thanks — I’ve got your message and will reply soon.</p>
+          <p id="formError" class="tt-error hidden">Something went wrong. Please try again.</p>
         </form>
       </div>
     </section>
@@ -400,8 +396,8 @@
       });
     }
 
-    // Formspree endpoint
-    const FORMSPREE_CONTACT = "https://formspree.io/f/xzdpweel";
+    // Formspree endpoint (matches form action)
+    const FORMSPREE_CONTACT = "https://formspree.io/f/movgnywr";
 
     async function submitForm(form, endpoint, successEl, errorEl, button, idleText) {
       successEl.classList.add('hidden');
