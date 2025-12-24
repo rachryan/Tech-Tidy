@@ -371,19 +371,27 @@ html{ scroll-behavior: smooth; }
 
 /* CTA block (soft contact earlier) */
 .tt-cta{
+  /* NEW: space above the box */
+  margin-top: 3rem; /* increase to 4rem if you want more separation */
+
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
-  padding: 18px;
-  background: rgba(255,255,255,0.70);
+
+  /* slightly roomier so it feels intentional */
+  padding: 22px;
+
+  /* NEW: cube color background */
+  background: var(--sand);
 }
 .tt-cta-soft{
-  background: linear-gradient(0deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
+  /* NEW: subtle lift so it doesn’t feel flat */
+  box-shadow: 0 8px 24px rgba(20,20,16,0.06);
 }
 .tt-cta-actions{
   display:flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 /* Stats */
