@@ -1,362 +1,395 @@
-/* styles.css */
-:root{
-  --bg: #F7F7F5;
-  --text: #141410;
-  --muted: #5F5F57;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechTidy — Digital clarity + workflow support</title>
+  <meta name="description" content="Digital cleanup + workflow support across Microsoft 365 and Google Workspace." />
 
-  --border: rgba(20,20,16,0.14);
-  --border-soft: rgba(20,20,16,0.10);
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-  --panel-soft: rgba(255,255,255,0.70);
+<body>
+  <!-- Topbar: quick nav only -->
+  <div class="tt-topbar" aria-label="Quick navigation">
+    <div class="tt-wrap tt-topbar-inner">
+      <div class="tt-topbar-left">
+        <a class="tt-toplink" href="#offers">Offers</a>
+        <span class="tt-topsep" aria-hidden="true">•</span>
+        <a class="tt-toplink" href="#about">About</a>
+        <span class="tt-topsep" aria-hidden="true">•</span>
+        <a class="tt-toplink" href="#start">Get started</a>
+      </div>
+      <div class="tt-topbar-right">
+        <a class="tt-toplink" href="#start">Book</a>
+      </div>
+    </div>
+  </div>
 
-  /* Soft palette */
-  --sand: #EDE8DF;
-  --sage: #DCE8E3;
-  --lav:  #E2E3F0;
-  --rose: #E9DCDC;
-  --mint: #DCE9E1;
-  --sky:  #DEE4F2;
+  <!-- Header -->
+  <header class="tt-header" role="banner">
+    <div class="tt-wrap tt-header-inner">
+      <a class="tt-logo" href="#home" aria-label="TechTidy Home">
+        <span class="tt-logo-mark" aria-hidden="true">TT</span>
+        <span class="tt-logo-text">TechTidy</span>
+      </a>
 
-  --radius: 12px;
-  --radius-lg: 14px;
-}
+      <nav class="tt-nav" aria-label="Primary navigation">
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#results">Results</a>
+        <a href="#start">Get started</a>
+      </nav>
 
-html{ scroll-behavior: smooth; }
-*{ box-sizing: border-box; }
-body{
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-}
+      <div class="tt-header-cta">
+        <a class="tt-btn tt-btn-primary" href="#start">Get started</a>
+      </div>
+    </div>
+  </header>
 
-.tt-wrap{ max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  <main id="home">
+    <!-- Hero: clearer audience + ONE primary CTA -->
+    <section class="tt-hero" aria-label="Intro">
+      <div class="tt-wrap tt-hero-grid">
+        <div class="tt-hero-left">
+          <h1 class="tt-h1">
+            Calm, usable systems
+            <span class="tt-h1-accent">that support your day.</span>
+          </h1>
 
-/* Links */
-.tt-link, .tt-toplink{
-  color: inherit;
-  text-decoration: none;
-}
-.tt-link{
-  color: var(--muted);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-}
-.tt-link:hover{ color: var(--text); }
-.tt-link-muted{ text-decoration: none; }
-.tt-link-muted:hover{ text-decoration: underline; }
+          <!-- Audience qualifier (fast self-identification) -->
+          <p class="tt-qualifier">
+            For solo operators and small teams who feel buried in digital clutter, approvals, and “where is that file?”
+          </p>
 
-.tt-toplink{ color: #fff; opacity: 0.95; }
-.tt-toplink:hover{ opacity: 1; }
-.tt-topsep{ opacity: 0.65; }
+          <p class="tt-lead">
+            Digital cleanup + workflow support across Microsoft 365 and Google Workspace.
+            Simple fixes. Maintainable systems. Less friction.
+          </p>
 
-/* Focus states (keyboard accessibility) */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible{
-  outline: 3px solid rgba(14,122,254,0.35);
-  outline-offset: 2px;
-  border-radius: 12px;
-}
+          <div class="tt-hero-cta">
+            <a class="tt-btn tt-btn-primary" href="#start">Get started</a>
+            <a class="tt-link tt-link-muted" href="#offers">See offers</a>
+          </div>
 
-/* Topbar */
-.tt-topbar{ background: var(--text); color: #fff; font-size: 14px; }
-.tt-topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-  flex-wrap: wrap;
-}
-.tt-topbar-left, .tt-topbar-right{ display:flex; align-items:center; gap: 10px; }
+          <div class="tt-chips" aria-label="What to expect">
+            <span class="tt-chip">Cleanup + structure</span>
+            <span class="tt-chip">Workflow + automation</span>
+            <span class="tt-chip">Training + handoff</span>
+          </div>
+        </div>
 
-/* Header */
-.tt-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(247,247,245,0.86);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.tt-header-inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  padding: 14px 0;
-  gap: 16px;
-}
+        <!-- Focus areas panel -->
+        <div class="tt-hero-right">
+          <div class="tt-panel tt-panel-tight">
+            <h2 class="tt-h2 tt-h2-sm">Focus areas</h2>
 
-/* Logo */
-.tt-logo{ display:flex; align-items:center; gap: 10px; text-decoration:none; color: var(--text); }
-.tt-logo-mark{
-  width: 34px; height: 34px; border-radius: 12px;
-  display:grid; place-items:center;
-  font-weight: 800; font-size: 13px;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid var(--border);
-}
-.tt-logo-text{ font-weight: 800; letter-spacing:-0.02em; font-size: 18px; }
+            <div class="tt-pillgrid tt-pillgrid-hero" aria-label="Focus areas and outcomes">
+              <div class="tt-pill tt-pill-sand">
+                <span class="tt-pill-title">Microsoft 365</span>
+                <span class="tt-pill-sub">Simplify files & sharing</span>
+              </div>
+              <div class="tt-pill tt-pill-sage">
+                <span class="tt-pill-title">Google Workspace</span>
+                <span class="tt-pill-sub">Cleaner Drive + Admin</span>
+              </div>
+              <div class="tt-pill tt-pill-lav">
+                <span class="tt-pill-title">AI workflows</span>
+                <span class="tt-pill-sub">Faster drafts & decisions</span>
+              </div>
+              <div class="tt-pill tt-pill-rose">
+                <span class="tt-pill-title">Automation</span>
+                <span class="tt-pill-sub">Remove repetitive steps</span>
+              </div>
+              <div class="tt-pill tt-pill-mint">
+                <span class="tt-pill-title">Training</span>
+                <span class="tt-pill-sub">Confidence for your team</span>
+              </div>
+              <div class="tt-pill tt-pill-sky">
+                <span class="tt-pill-title">Digital cleanup</span>
+                <span class="tt-pill-sub">Find things in seconds</span>
+              </div>
+            </div>
 
-/* Nav */
-.tt-nav{ display:none; gap: 18px; font-size: 14px; color: var(--muted); }
-.tt-nav a{
-  color: inherit; text-decoration: none;
-  padding: 8px 10px; border-radius: 12px;
-}
-.tt-nav a:hover{ color: var(--text); background: rgba(255,255,255,0.55); }
-@media (min-width: 768px){ .tt-nav{ display:flex; } }
+            <div class="tt-panel-divider" role="separator" aria-hidden="true"></div>
 
-/* Buttons */
-.tt-btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
-  background: rgba(255,255,255,0.85);
-  color: var(--text);
-}
-.tt-btn:hover{ background: #fff; }
-.tt-btn-primary{
-  background: var(--text);
-  color: #fff;
-  border-color: rgba(20,20,16,0.85);
-}
-.tt-btn-primary:hover{ background: #0f0f0d; }
+            <p class="tt-mini-note">
+              <strong>Not sure what you need?</strong>
+              That’s normal. Tell me what feels messy (files, email, approvals, recurring tasks).
+              I’ll recommend the smallest fix that creates real relief.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Hero */
-.tt-hero{ padding: 58px 0 26px; }
-.tt-hero-grid{ display:grid; gap: 18px; }
-@media (min-width: 1024px){
-  .tt-hero-grid{ grid-template-columns: 1.1fr 0.9fr; gap: 34px; align-items: start; }
-}
-.tt-h1{
-  font-size: clamp(38px, 4.2vw, 56px);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  font-weight: 850;
-  margin: 0;
-}
-.tt-h1-accent{ display:block; }
+    <!-- Offers -->
+    <section id="offers" class="tt-section" aria-label="Offers">
+      <div class="tt-wrap">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Offers</h2>
+          <p class="tt-sub" style="max-width: 70ch;">
+            Start small. We pick the tightest scope that solves the real problem.
+          </p>
+        </div>
 
-.tt-qualifier{
-  margin: 12px 0 0;
-  max-width: 62ch;
-  font-size: 15px;
-  line-height: 1.55;
-  color: rgba(20,20,16,0.72);
-  font-weight: 650;
-}
+        <div class="tt-cards" role="list">
+          <article class="tt-card" role="listitem">
+            <h3 class="tt-h3">Quick Fix Session</h3>
+            <p class="tt-sub">One focused session to remove a specific point of friction.</p>
 
-.tt-lead{
-  font-size: 17px;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-top: 12px;
-  max-width: 46rem;
-}
-.tt-hero-cta{ display:flex; gap: 14px; align-items:center; flex-wrap: wrap; margin-top: 18px; }
+            <div class="tt-fit">
+              <div class="tt-fit-row">
+                <span class="tt-tag">Good fit if</span>
+                <span class="tt-tagtext">You know what’s broken and want it fixed cleanly (without creating new mess).</span>
+              </div>
+              <div class="tt-fit-row">
+                <span class="tt-tag tt-tag-soft">Not for</span>
+                <span class="tt-tagtext">Big migrations, multi-department change, or “rebuild everything.”</span>
+              </div>
+            </div>
 
-/* Chips */
-.tt-chips{ margin-top: 16px; display:flex; gap: 10px; flex-wrap: wrap; }
-.tt-chip{
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border-soft);
-  background: rgba(255,255,255,0.65);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 650;
-}
+            <details class="tt-details">
+              <summary class="tt-summary">Examples</summary>
+              <ul class="tt-list">
+                <li>Inbox rules + triage setup</li>
+                <li>Drive/OneDrive structure reset</li>
+                <li>Permission/share cleanup</li>
+                <li>Workflow tightening (handoffs, approvals)</li>
+              </ul>
+            </details>
+          </article>
 
-/* Sections */
-.tt-section{ padding: 70px 0; }
-.tt-section-soft{
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-  background:
-    radial-gradient(circle at 10% 0%, rgba(220,232,227,0.35), transparent 45%),
-    radial-gradient(circle at 90% 10%, rgba(233,220,220,0.35), transparent 50%);
-}
-.tt-section-alt{
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-  background:
-    radial-gradient(circle at 15% 0%, rgba(222,228,242,0.40), transparent 45%),
-    radial-gradient(circle at 90% 20%, rgba(220,233,225,0.35), transparent 50%);
-}
-.tt-section-head{ display:flex; flex-direction: column; gap: 8px; }
-.tt-h2{ margin:0; font-size: clamp(28px, 2.6vw, 34px); letter-spacing:-0.02em; font-weight: 850; }
-.tt-h2-sm{ font-size: 18px; letter-spacing: -0.01em; }
-.tt-h3{ margin:0; font-size: 18px; letter-spacing:-0.01em; font-weight: 850; }
-.tt-sub{ margin:0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+          <article class="tt-card" role="listitem">
+            <h3 class="tt-h3">Digital Reset</h3>
+            <p class="tt-sub">A structured cleanup so your tools feel calm and predictable again.</p>
 
-/* Grids */
-.tt-grid-2{ display:grid; gap: 18px; }
-@media (min-width: 900px){ .tt-grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            <div class="tt-fit">
+              <div class="tt-fit-row">
+                <span class="tt-tag">Good fit if</span>
+                <span class="tt-tagtext">Your setup works “sometimes,” but it’s messy underneath and draining your attention.</span>
+              </div>
+              <div class="tt-fit-row">
+                <span class="tt-tag tt-tag-soft">Not for</span>
+                <span class="tt-tagtext">Teams who won’t follow simple rules (no judgement—just reality).</span>
+              </div>
+            </div>
 
-/* Cards / panels */
-.tt-panel,
-.tt-card{
-  background: var(--panel-soft);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-lg);
-}
-.tt-panel{ padding: 18px; }
-.tt-panel-tight{ padding: 16px; }
-.tt-card{
-  background: rgba(255,255,255,0.75);
-  padding: 20px;
-  box-shadow: 0 10px 26px rgba(20,20,16,0.04);
-}
-.tt-card-padless{ padding: 0; overflow:hidden; }
-.tt-card-head{ padding: 18px 20px 0; }
+            <details class="tt-details">
+              <summary class="tt-summary">Typical outcomes</summary>
+              <ul class="tt-list">
+                <li>Clear folder rules (so it stays tidy)</li>
+                <li>Share + permission sanity</li>
+                <li>Simple naming patterns</li>
+                <li>Less “where is that?” time</li>
+              </ul>
+            </details>
+          </article>
 
-.tt-panel-divider{ height: 1px; background: var(--border-soft); margin: 14px 0; }
-.tt-mini-note{ color: var(--muted); font-size: 14px; line-height: 1.55; }
-.tt-mini-note strong{ color: var(--text); }
+          <article class="tt-card" role="listitem">
+            <h3 class="tt-h3">Workflow + Automation</h3>
+            <p class="tt-sub">Remove repetitive steps with light automation and better flow.</p>
 
-/* Offers */
-.tt-cards{ display:grid; gap: 18px; margin-top: 18px; }
-@media (min-width: 900px){ .tt-cards{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+            <div class="tt-fit">
+              <div class="tt-fit-row">
+                <span class="tt-tag">Good fit if</span>
+                <span class="tt-tagtext">Recurring tasks keep stealing time and your process depends on memory and chasing people.</span>
+              </div>
+              <div class="tt-fit-row">
+                <span class="tt-tag tt-tag-soft">Not for</span>
+                <span class="tt-tagtext">Complex enterprise automation programs or heavy custom development.</span>
+              </div>
+            </div>
 
-.tt-fit{ margin-top: 12px; display:flex; flex-direction: column; gap: 10px; }
-.tt-fit-row{ display:flex; gap: 10px; align-items:flex-start; flex-wrap: wrap; }
+            <details class="tt-details">
+              <summary class="tt-summary">Examples</summary>
+              <ul class="tt-list">
+                <li>Intake forms → task routing</li>
+                <li>Simple approval workflows</li>
+                <li>Auto reminders + follow-ups</li>
+                <li>Templates + AI prompting workflows</li>
+              </ul>
+            </details>
+          </article>
+        </div>
 
-.tt-tag{
-  display:inline-flex; align-items:center;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  background: rgba(237,232,223,0.75);
-  border: 1px solid var(--border-soft);
-}
-.tt-tag-soft{
-  background: rgba(222,228,242,0.55);
-}
-.tt-tagtext{ color: var(--muted); font-size: 14px; line-height: 1.55; flex: 1 1 220px; }
+        <div class="tt-center-cta">
+          <a class="tt-btn tt-btn-primary" href="#start">Get started</a>
+          <p class="tt-sub" style="max-width: 70ch; margin: 10px auto 0;">
+            Book a quick call or send a note. Same destination.
+          </p>
+        </div>
+      </div>
+    </section>
 
-.tt-details{ margin-top: 12px; border-top: 1px solid var(--border-soft); padding-top: 12px; }
-.tt-summary{ cursor:pointer; font-weight: 850; color: var(--text); list-style:none; }
-.tt-summary::-webkit-details-marker{ display:none; }
-.tt-details[open] .tt-summary{ margin-bottom: 8px; }
+    <!-- About -->
+    <section id="about" class="tt-section tt-section-soft" aria-label="About">
+      <div class="tt-wrap tt-grid-2">
+        <div>
+          <h2 class="tt-h2">About</h2>
+          <p class="tt-sub" style="max-width: 70ch;">
+            I’m Rachel. I help people make their tools usable again—without over-engineering.
+            We fix what’s broken, tidy what’s messy, and leave you with a system you can maintain.
+          </p>
+          <p class="tt-sub" style="max-width: 70ch; margin-top: 10px;">
+            We reduce digital clutter, tighten workflows, and automate repetitive work across Microsoft 365 and Google Workspace —
+            so your setup actually supports your day.
+          </p>
+        </div>
 
-.tt-list{ margin: 10px 0 0; padding-left: 18px; color: var(--text); }
-.tt-list li{ margin: 8px 0; line-height: 1.55; }
+        <div class="tt-card">
+          <h3 class="tt-h3">How it works</h3>
+          <ol class="tt-steps" aria-label="Process steps">
+            <li class="tt-step">
+              <div class="tt-step-title">1) Quick clarity</div>
+              <div class="tt-step-sub">We find the friction point (what’s costing you time/energy).</div>
+            </li>
+            <li class="tt-step">
+              <div class="tt-step-title">2) Fix the system</div>
+              <div class="tt-step-sub">Cleanup + structure + workflow improvements (only what you’ll keep).</div>
+            </li>
+            <li class="tt-step">
+              <div class="tt-step-title">3) Keep it easy</div>
+              <div class="tt-step-sub">Simple handoff so it stays tidy after I’m gone.</div>
+            </li>
+          </ol>
+          <div class="tt-card-foot">
+            <a class="tt-btn tt-btn-primary" href="#start">Get started</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Center CTA */
-.tt-center-cta{ margin-top: 24px; text-align: center; }
+    <!-- Results -->
+    <section id="results" class="tt-section" aria-label="Results">
+      <div class="tt-wrap tt-grid-2">
+        <div>
+          <h2 class="tt-h2">Results</h2>
+          <p class="tt-sub" style="max-width: 70ch;">
+            The goal isn’t perfect. It’s usable on real-life days.
+          </p>
 
-/* Bullets */
-.tt-bullets{ margin-top: 16px; display:grid; gap: 10px; }
-.tt-bullet{ display:flex; gap: 10px; align-items:flex-start; line-height: 1.55; }
-.tt-dot{ width: 10px; height: 10px; border-radius: 999px; margin-top: 6px; background: rgba(20,20,16,0.25); flex:0 0 auto; }
-.tt-bullet strong{ font-weight: 850; }
+          <div class="tt-bullets" aria-label="Common outcomes">
+            <div class="tt-bullet"><span class="tt-dot" aria-hidden="true"></span><span><strong>Faster retrieval</strong> — less time hunting for files and “the right version.”</span></div>
+            <div class="tt-bullet"><span class="tt-dot" aria-hidden="true"></span><span><strong>Cleaner collaboration</strong> — sharing and permissions stop being a slow-motion crisis.</span></div>
+            <div class="tt-bullet"><span class="tt-dot" aria-hidden="true"></span><span><strong>Lower cognitive load</strong> — fewer decisions, fewer steps, less friction.</span></div>
+          </div>
+        </div>
 
-/* Quotes */
-.tt-quote{
-  margin-top: 12px;
-  padding: 14px 14px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-soft);
-  background: rgba(255,255,255,0.68);
-}
+        <div class="tt-card">
+          <h3 class="tt-h3">What clients usually say</h3>
+          <div class="tt-quote"><p class="tt-sub">“It feels calmer. I don’t dread opening my inbox or Drive anymore.”</p></div>
+          <div class="tt-quote"><p class="tt-sub">“The structure sticks because it’s simple.”</p></div>
+          <div class="tt-quote"><p class="tt-sub">“We finally have a workflow everyone can follow.”</p></div>
+        </div>
+      </div>
+    </section>
 
-/* Steps */
-.tt-steps{ margin: 12px 0 0; padding-left: 18px; color: var(--text); }
-.tt-step{ margin: 10px 0; }
-.tt-step-title{ font-weight: 850; letter-spacing: -0.01em; }
-.tt-step-sub{ margin-top: 4px; color: var(--muted); line-height: 1.55; font-weight: 500; }
-.tt-card-foot{ display:flex; gap: 12px; align-items:center; flex-wrap: wrap; margin-top: 14px; }
+    <!-- Get started -->
+    <section id="start" class="tt-section tt-section-alt" aria-label="Get started">
+      <div class="tt-wrap">
+        <div class="tt-section-head">
+          <h2 class="tt-h2">Get started</h2>
+          <p class="tt-sub" style="max-width: 70ch;">
+            Book a discovery call or send a note. Either way, we’ll pick the smallest fix that creates real relief.
+          </p>
+        </div>
 
-/* Start section */
-.tt-start-grid{
-  margin-top: 18px;
-  display:grid;
-  gap: 18px;
-}
-@media (min-width: 900px){
-  .tt-start-grid{ grid-template-columns: 1.15fr 0.85fr; align-items: start; }
-}
+        <div class="tt-start-grid">
+          <!-- Calendly -->
+          <div class="tt-card tt-card-padless" aria-label="Booking">
+            <div class="tt-card-head">
+              <h3 class="tt-h3">Book</h3>
+              <p class="tt-sub">15–20 minutes • clarity + next step</p>
+            </div>
 
-/* Embed wrapper */
-.tt-embed{
-  margin-top: 14px;
-  background: rgba(255,255,255,0.65);
-  border-top: 1px solid var(--border-soft);
-  padding: 14px 20px 20px;
-}
+            <div class="tt-embed">
+              <div class="calendly-inline-widget"
+                   data-url="https://calendly.com/tech_tidy?hide_gdpr_banner=1&background_color=adc9b0&primary_color=547667"
+                   style="min-width:320px;height:700px;"></div>
+              <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+          </div>
 
-/* Contact form */
-.tt-field{
-  display:flex;
-  flex-direction: column;
-  gap: 8px;
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 850;
-  margin-top: 14px;
-}
-.tt-field input,
-.tt-field textarea{
-  font: inherit;
-  font-weight: 500;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.92);
-  outline: none;
-}
-.tt-field input:focus,
-.tt-field textarea:focus{ border-color: rgba(20,20,16,0.35); }
+          <!-- Contact -->
+          <form
+            id="contactForm"
+            class="tt-card"
+            method="POST"
+            action="https://formspree.io/f/xzdpweel"
+            aria-label="Contact form"
+          >
+            <h3 class="tt-h3">Send a note</h3>
+            <p class="tt-sub">
+              Not sure what you need yet? Tell me what feels messy and what tool(s) you’re using. I’ll point you to the smallest fix.
+            </p>
 
-/* Pills */
-.tt-pillgrid{ display:grid; gap: 10px; }
-.tt-pillgrid-hero{ grid-template-columns: 1fr; margin-top: 12px; }
-@media (min-width: 540px){ .tt-pillgrid-hero{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            <div class="tt-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
 
-.tt-pill{
-  display:flex; flex-direction: column; gap: 4px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border-soft);
-  background: rgba(255,255,255,0.85);
-  min-height: 58px;
-}
-.tt-pill-title{ font-weight: 850; font-size: 13.5px; letter-spacing: -0.01em; color: var(--text); }
-.tt-pill-sub{ font-size: 13px; color: var(--muted); line-height: 1.25; }
+            <div class="tt-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
 
-.tt-pill-sand{ background: rgba(237,232,223,0.65); }
-.tt-pill-sage{ background: rgba(220,232,227,0.65); }
-.tt-pill-lav{  background: rgba(226,227,240,0.65); }
-.tt-pill-rose{ background: rgba(233,220,220,0.65); }
-.tt-pill-mint{ background: rgba(220,233,225,0.65); }
-.tt-pill-sky{  background: rgba(222,228,242,0.65); }
+            <div class="tt-field">
+              <label for="message">What do you want to fix?</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
 
-/* Footer */
-.tt-footer{ border-top: 1px solid var(--border-soft); padding: 24px 0; }
-.tt-footer-inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  color: var(--muted);
-}
-.tt-foot-left{ display:flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
-.tt-foot-muted{ color: var(--muted); }
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-/* Mobile tightening */
-@media (max-width: 520px){
-  .tt-hero{ padding: 52px 0 22px; }
-  .tt-section{ padding: 62px 0; }
-  .tt-card{ padding: 18px; }
-  .tt-card-head{ padding: 16px 18px 0; }
-  .tt-embed{ padding: 14px 18px 18px; }
-}
+            <button class="tt-btn tt-btn-primary" type="submit">Send message</button>
+
+            <p class="tt-sub" style="margin-top: 10px;">
+              Prefer booking? Use the calendar on the left.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="tt-footer" role="contentinfo">
+    <div class="tt-wrap tt-footer-inner">
+      <div class="tt-foot-left">
+        <strong>TechTidy</strong>
+        <span class="tt-foot-muted">Digital clarity + workflow support</span>
+      </div>
+      <div class="tt-foot-right">
+        <a class="tt-link" href="#home">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatolia widget: keep INSIDE body, near the end -->
+  <script
+    src="https://www.chatolia.com/widget.js?v=5336d80e"
+    data-agent="msviicm9vivqvkmj"
+    data-position="bottom-left"
+    data-width="440"
+    data-height="85dvh"
+    data-theme="system"
+    data-icon-size="medium"
+    data-icon-url="https://mudjhv8kdnrtw1va.public.blob.vercel-storage.com/a/cbbb47d5-06d5-46c2-928d-89f1cf2b6024/icon/1766975716396-TT0-LPVfVzQ5uS0HiIMlV4TLpqXsZQZZZs.png"
+    data-icon-style="circle"
+    data-hint-dismissible="true"
+    data-hint-show-desktop="true"
+    data-hint-show-mobile="true"
+    data-hint-text="Need help? Ask me!"
+    data-hint-show-mode="always"
+    data-hint-size="medium"
+    data-hint-delay="0"
+    data-hint-auto-hide="0"
+    data-hint-frequency="always"
+    data-hint-version="v1"
+    data-primary="#0e7afe"
+    async
+  ></script>
+</body>
+</html>
