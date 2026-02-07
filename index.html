@@ -35,7 +35,7 @@
 </nav>
 
 <!-- HERO -->
-<header class="max-w-5xl mx-auto px-6 pt-24 pb-24">
+<header class="max-w-5xl mx-auto px-6 pt-24 pb-20">
   <div class="max-w-3xl">
     <span class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold mb-4 block">
       Clear systems • Connected tools • Calm workflows
@@ -46,37 +46,84 @@
     </h1>
 
     <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl">
-      If your apps don’t talk to each other and everything feels harder than it should,
-      TechTidy helps you simplify, connect, and stay in control—without jargon or overwhelm.
+      If your tools don’t line up with how you actually work, TechTidy helps you simplify, connect,
+      and stay in control—without jargon or overwhelm.
     </p>
 
-    <a href="#what"
-       class="text-sm font-semibold border-b-2 border-[#1A1A1A] pb-1 hover:text-slate-500 hover:border-slate-500 transition inline-block">
-      See what this looks like →
-    </a>
+    <div class="flex flex-col sm:flex-row gap-6 items-start">
+      <a href="#triage"
+         class="text-sm font-semibold border-b-2 border-[#1A1A1A] pb-1 hover:text-slate-500 hover:border-slate-500 transition inline-block">
+        Show me the smallest fix →
+      </a>
+
+      <a href="#"
+         onclick="Calendly.initPopupWidget({url:'https://calendly.com/tech_tidy/30min'});return false;"
+         class="text-sm font-semibold text-slate-700 hover:text-slate-500 transition">
+        Or book a 30-min chat
+      </a>
+    </div>
   </div>
 </header>
 
-<!-- OUTCOMES -->
+<!-- PROOF STRIP (moved up for trust + momentum) -->
 <section class="bg-white border-y border-slate-200">
-  <div class="max-w-5xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
-    <div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Clarity</p>
-      <p class="text-lg text-slate-700">You know what’s happening—and what to fix first.</p>
+  <div class="max-w-5xl mx-auto px-6 py-14">
+    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-6 font-semibold">
+      What changes after TechTidy
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="text-lg text-slate-700">Less time hunting for “the right version.”</p>
+      </div>
+      <div>
+        <p class="text-lg text-slate-700">Fewer stuck approvals and dropped tasks.</p>
+      </div>
+      <div>
+        <p class="text-lg text-slate-700">Calmer days: fewer steps, fewer decisions.</p>
+      </div>
     </div>
-    <div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Flow</p>
-      <p class="text-lg text-slate-700">Your tools work together instead of fighting you.</p>
-    </div>
-    <div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Confidence</p>
-      <p class="text-lg text-slate-700">You’re not dependent on “the tech person.”</p>
+
+    <div class="mt-10 max-w-3xl">
+      <p class="text-slate-600 leading-relaxed">
+        “It finally feels like our tools match how we work. Things move without chasing people.”
+      </p>
+      <p class="mt-2 text-[10px] uppercase tracking-widest text-slate-400">— Recent client</p>
     </div>
   </div>
 </section>
 
+<!-- TRIAGE (replaces stats; keeps curiosity high) -->
+<section id="triage" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-10 font-semibold">
+    What’s causing friction right now?
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <a href="#what" class="triage-card block bg-white border border-slate-200 p-8 hover:bg-[#F9F9F7] transition">
+      <p class="font-semibold mb-2">I can’t find files (or we duplicate work)</p>
+      <p class="text-slate-600 text-sm">Versions, folders, and “where did it go?” problems.</p>
+    </a>
+
+    <a href="#what" class="triage-card block bg-white border border-slate-200 p-8 hover:bg-[#F9F9F7] transition">
+      <p class="font-semibold mb-2">People miss steps / approvals stall</p>
+      <p class="text-slate-600 text-sm">Work gets stuck because handoffs aren’t clear.</p>
+    </a>
+
+    <a href="#what" class="triage-card block bg-white border border-slate-200 p-8 hover:bg-[#F9F9F7] transition">
+      <p class="font-semibold mb-2">Inbox is chaos / follow-ups slip</p>
+      <p class="text-slate-600 text-sm">Too many reminders, too much manual tracking.</p>
+    </a>
+
+    <a href="#what" class="triage-card block bg-white border border-slate-200 p-8 hover:bg-[#F9F9F7] transition">
+      <p class="font-semibold mb-2">Our tools don’t match how we work</p>
+      <p class="text-slate-600 text-sm">The setup is “almost working” but drains time daily.</p>
+    </a>
+  </div>
+</section>
+
 <!-- HOW IT HELPS -->
-<section id="how" class="max-w-5xl mx-auto px-6 py-32">
+<section id="how" class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200">
   <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-16 font-semibold">
     How it helps
   </h2>
@@ -84,37 +131,84 @@
   <div class="grid md:grid-cols-3 gap-16">
     <div>
       <h3 class="text-2xl font-medium mb-4">See what’s really happening</h3>
-      <p class="text-slate-600">We map your tools so the confusion becomes visible.</p>
+      <p class="text-slate-600">We map your tools and workflow so the confusion becomes visible.</p>
     </div>
     <div>
       <h3 class="text-2xl font-medium mb-4">Clean up the mess</h3>
-      <p class="text-slate-600">Files, permissions, and workflows get simpler.</p>
+      <p class="text-slate-600">Files, sharing, and repeat tasks get simpler and predictable.</p>
     </div>
     <div>
       <h3 class="text-2xl font-medium mb-4">Keep you confident</h3>
-      <p class="text-slate-600">You leave with systems you actually understand.</p>
+      <p class="text-slate-600">You leave with a system you understand and can maintain.</p>
     </div>
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
+<!-- WHAT YOU GET (compressed, outcome-first) -->
 <section id="what" class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200">
-  <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-16 font-semibold">
-    What you get
-  </h2>
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+    <div>
+      <h2 class="text-sm uppercase tracking-widest text-slate-400 font-semibold mb-4">
+        What you get
+      </h2>
+      <h3 class="text-3xl font-light">
+        Choose the smallest thing that makes everything easier.
+      </h3>
+    </div>
+    <div class="text-slate-600 max-w-md">
+      Not sure which one? Book a quick chat and leave with a clear first move.
+    </div>
+  </div>
 
-  <div class="grid md:grid-cols-2 gap-px bg-slate-200 border border-slate-200">
-    <div class="solution-card bg-[#F9F9F7] p-10">
-      <h4 class="font-semibold mb-3">Find files in seconds</h4>
-      <p class="text-slate-600 text-sm">
-        Clear structure. Clear ownership. No digging.
+  <div class="grid md:grid-cols-3 gap-6">
+    <!-- Offer 1 -->
+    <div class="offer-card bg-white border border-slate-200 p-10">
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-3">Quick Fix Session</p>
+      <h4 class="font-semibold mb-3">One focused fix, done.</h4>
+      <p class="text-slate-600 text-sm mb-6">
+        We remove a specific point of friction and set a simple rule so it stays fixed.
+      </p>
+      <ul class="text-slate-700 text-sm space-y-2 mb-6">
+        <li>• A clean improvement you can feel immediately</li>
+        <li>• A simple “keep it working” standard</li>
+        <li>• A clear next step (only if needed)</li>
+      </ul>
+      <p class="text-slate-400 text-xs">
+        Not for: “rebuild everything” projects.
       </p>
     </div>
 
-    <div class="solution-card bg-[#F9F9F7] p-10">
-      <h4 class="font-semibold mb-3">Less busywork</h4>
-      <p class="text-slate-600 text-sm">
-        Simple automations remove repeat tasks and errors.
+    <!-- Offer 2 -->
+    <div class="offer-card bg-white border border-slate-200 p-10">
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-3">Digital Reset</p>
+      <h4 class="font-semibold mb-3">Calm, clean, predictable tools.</h4>
+      <p class="text-slate-600 text-sm mb-6">
+        A structured cleanup so files, sharing, and daily work feel straightforward again.
+      </p>
+      <ul class="text-slate-700 text-sm space-y-2 mb-6">
+        <li>• Find what you need in seconds</li>
+        <li>• Sharing that stops causing drama</li>
+        <li>• A structure your team can actually keep</li>
+      </ul>
+      <p class="text-slate-400 text-xs">
+        Not for: teams unwilling to follow basic rules.
+      </p>
+    </div>
+
+    <!-- Offer 3 -->
+    <div class="offer-card bg-white border border-slate-200 p-10">
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-3">Workflow + Automation</p>
+      <h4 class="font-semibold mb-3">Less chasing. More flow.</h4>
+      <p class="text-slate-600 text-sm mb-6">
+        Remove repeat steps so work moves without constant reminders and manual tracking.
+      </p>
+      <ul class="text-slate-700 text-sm space-y-2 mb-6">
+        <li>• Fewer follow-ups and status pings</li>
+        <li>• Clear handoffs everyone understands</li>
+        <li>• Less time lost to “who’s doing what?”</li>
+      </ul>
+      <p class="text-slate-400 text-xs">
+        Not for: heavy custom software development.
       </p>
     </div>
   </div>
@@ -132,8 +226,8 @@
       <h3 class="text-3xl font-light mb-6">Clear systems. No ego.</h3>
 
       <p class="text-lg text-slate-600 mb-6">
-        I built TechTidy after watching smart teams get slowed down by scattered tools
-        and almost-working setups. The goal is simple: calm, connected systems.
+        I built TechTidy after watching smart teams get slowed down by scattered tools and almost-working setups.
+        The goal is simple: calm, connected systems you can actually run.
       </p>
 
       <p class="text-slate-500 italic">— Founder, TechTidy</p>
@@ -141,9 +235,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER (stronger value, fewer words) -->
 <footer class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200 text-center">
-  <h2 class="text-4xl font-light mb-8 italic">Want your day to feel easier?</h2>
+  <h2 class="text-4xl font-light mb-6 italic">15–20 minutes. Leave with a plan.</h2>
+  <p class="text-slate-600 mb-12 text-lg max-w-2xl mx-auto">
+    We’ll identify the smallest fix worth doing, what it costs (time + money), and whether I’m the right fit.
+  </p>
 
   <a href="#"
      onclick="Calendly.initPopupWidget({url:'https://calendly.com/tech_tidy/30min'});return false;"
