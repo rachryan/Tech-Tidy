@@ -1,4 +1,3 @@
-/* Core refinements */
 html {
   scroll-behavior: smooth;
 }
@@ -9,39 +8,35 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Typography balancing */
+/* Headings */
 h1, h2, h3 {
   letter-spacing: -0.02em;
 }
 
-/* Scroll margin so sticky header doesn't cover section titles */
-section, footer, header {
+/* Offset for sticky nav */
+section, header, footer {
   scroll-margin-top: 96px;
 }
 
-/* Navbar scrolled state */
+/* Navbar scroll state */
 #navbar.border-slate-200 {
   background-color: rgba(249, 249, 247, 0.95);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.02);
 }
 
-/* Subtle card interaction */
+/* Solution cards */
 .solution-card {
-  background-color: transparent;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
 }
 
 .solution-card:hover {
   background-color: #ffffff;
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
-  z-index: 5;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.02);
 }
 
-/* About image refinement */
+/* About image */
 .about-image {
-  display: block;
   opacity: 0.9;
   transform: scale(1.01);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -53,14 +48,14 @@ section, footer, header {
   filter: grayscale(0%);
 }
 
-/* Ensure the About section behaves on mobile */
+/* Mobile spacing */
 @media (max-width: 768px) {
   #about .flex-col {
     gap: 2rem;
   }
 }
 
-/* Calendly popup customization */
+/* Calendly overlay */
 .calendly-overlay {
   background-color: rgba(26, 26, 26, 0.9) !important;
 }
