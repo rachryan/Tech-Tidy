@@ -1,6 +1,4 @@
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -8,31 +6,35 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Headings */
-h1, h2, h3 {
-  letter-spacing: -0.02em;
-}
+h1, h2, h3 { letter-spacing: -0.02em; }
 
-/* Offset for sticky nav */
-section, header, footer {
-  scroll-margin-top: 96px;
-}
+section, header, footer { scroll-margin-top: 96px; }
 
-/* Navbar scroll state */
 #navbar.border-slate-200 {
   background-color: rgba(249, 249, 247, 0.95);
   box-shadow: 0 4px 30px rgba(0,0,0,0.02);
 }
 
-/* Solution cards */
+/* Existing solution cards */
 .solution-card {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .solution-card:hover {
   background-color: #ffffff;
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+}
+
+/* New triage + offer cards */
+.triage-card,
+.offer-card {
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.triage-card:hover,
+.offer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
 }
 
 /* About image */
@@ -41,7 +43,6 @@ section, header, footer {
   transform: scale(1.01);
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .about-image:hover {
   opacity: 1;
   transform: scale(1.03);
@@ -50,16 +51,22 @@ section, header, footer {
 
 /* Mobile spacing */
 @media (max-width: 768px) {
-  #about .flex-col {
-    gap: 2rem;
-  }
+  #about .flex-col { gap: 2rem; }
 }
 
 /* Calendly overlay */
 .calendly-overlay {
   background-color: rgba(26, 26, 26, 0.9) !important;
 }
+.calendly-popup { border-radius: 4px !important; }
 
-.calendly-popup {
-  border-radius: 4px !important;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .triage-card,
+  .offer-card,
+  .solution-card,
+  .about-image {
+    transition: none !important;
+    transform: none !important;
+  }
 }
