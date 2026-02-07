@@ -16,4 +16,154 @@
 <body class="bg-[#F9F9F7] text-[#1A1A1A] selection:bg-slate-200">
 
 <!-- NAV -->
-<nav id="navba
+<nav id="navbar" class="sticky top-0 z-50 bg-[#F9F9F7]/80 backdrop-blur-md border-b border-transparent transition-all duration-300">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-semibold tracking-tighter">TechTidy</div>
+
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <a href="#how" class="hover:text-slate-500 transition">How it helps</a>
+      <a href="#what" class="hover:text-slate-500 transition">What you get</a>
+      <a href="#about" class="hover:text-slate-500 transition">About</a>
+
+      <a href="#"
+         onclick="Calendly.initPopupWidget({url:'https://calendly.com/tech_tidy/30min'});return false;"
+         class="bg-[#1A1A1A] text-white px-4 py-2 hover:bg-slate-800 transition">
+        Book a chat
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="max-w-5xl mx-auto px-6 pt-24 pb-24">
+  <div class="max-w-3xl">
+    <span class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold mb-4 block">
+      Clear systems • Connected tools • Calm workflows
+    </span>
+
+    <h1 class="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8">
+      Make your tech <span class="italic font-normal">work for you</span>.
+    </h1>
+
+    <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl">
+      If your apps don’t talk to each other and everything feels harder than it should,
+      TechTidy helps you simplify, connect, and stay in control—without jargon or overwhelm.
+    </p>
+
+    <a href="#what"
+       class="text-sm font-semibold border-b-2 border-[#1A1A1A] pb-1 hover:text-slate-500 hover:border-slate-500 transition inline-block">
+      See what this looks like →
+    </a>
+  </div>
+</header>
+
+<!-- OUTCOMES -->
+<section class="bg-white border-y border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+    <div>
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Clarity</p>
+      <p class="text-lg text-slate-700">You know what’s happening—and what to fix first.</p>
+    </div>
+    <div>
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Flow</p>
+      <p class="text-lg text-slate-700">Your tools work together instead of fighting you.</p>
+    </div>
+    <div>
+      <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Confidence</p>
+      <p class="text-lg text-slate-700">You’re not dependent on “the tech person.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT HELPS -->
+<section id="how" class="max-w-5xl mx-auto px-6 py-32">
+  <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-16 font-semibold">
+    How it helps
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-16">
+    <div>
+      <h3 class="text-2xl font-medium mb-4">See what’s really happening</h3>
+      <p class="text-slate-600">We map your tools so the confusion becomes visible.</p>
+    </div>
+    <div>
+      <h3 class="text-2xl font-medium mb-4">Clean up the mess</h3>
+      <p class="text-slate-600">Files, permissions, and workflows get simpler.</p>
+    </div>
+    <div>
+      <h3 class="text-2xl font-medium mb-4">Keep you confident</h3>
+      <p class="text-slate-600">You leave with systems you actually understand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what" class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200">
+  <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-16 font-semibold">
+    What you get
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-px bg-slate-200 border border-slate-200">
+    <div class="solution-card bg-[#F9F9F7] p-10">
+      <h4 class="font-semibold mb-3">Find files in seconds</h4>
+      <p class="text-slate-600 text-sm">
+        Clear structure. Clear ownership. No digging.
+      </p>
+    </div>
+
+    <div class="solution-card bg-[#F9F9F7] p-10">
+      <h4 class="font-semibold mb-3">Less busywork</h4>
+      <p class="text-slate-600 text-sm">
+        Simple automations remove repeat tasks and errors.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200">
+  <div class="flex flex-col md:flex-row gap-16 items-center">
+    <div class="w-full md:w-1/2 overflow-hidden rounded-sm">
+      <img src="office.png" alt="TechTidy Office" class="about-image w-full h-auto grayscale">
+    </div>
+
+    <div class="w-full md:w-1/2">
+      <h2 class="text-sm uppercase tracking-widest text-slate-400 mb-6 font-semibold">About</h2>
+      <h3 class="text-3xl font-light mb-6">Clear systems. No ego.</h3>
+
+      <p class="text-lg text-slate-600 mb-6">
+        I built TechTidy after watching smart teams get slowed down by scattered tools
+        and almost-working setups. The goal is simple: calm, connected systems.
+      </p>
+
+      <p class="text-slate-500 italic">— Founder, TechTidy</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="max-w-5xl mx-auto px-6 py-32 border-t border-slate-200 text-center">
+  <h2 class="text-4xl font-light mb-8 italic">Want your day to feel easier?</h2>
+
+  <a href="#"
+     onclick="Calendly.initPopupWidget({url:'https://calendly.com/tech_tidy/30min'});return false;"
+     class="inline-block bg-[#1A1A1A] text-white px-10 py-5 text-sm font-medium hover:bg-slate-800 transition">
+    Book a 30-min chat
+  </a>
+
+  <p class="mt-24 text-[10px] text-slate-400 tracking-widest uppercase">
+    © 2026 TechTidy Consulting
+  </p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    window.scrollY > 20
+      ? nav.classList.add('border-slate-200')
+      : nav.classList.remove('border-slate-200');
+  });
+</script>
+
+</body>
+</html>
